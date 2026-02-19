@@ -33,7 +33,7 @@ function __InputConfigVerbs()
     }
     else
     {
-        InputDefineVerb(INPUT_VERB.ACCEPT, "accept", "Z",     gp_face1);
+        InputDefineVerb(INPUT_VERB.ACCEPT, "accept", ["Z", vk_space],     gp_face1);
         InputDefineVerb(INPUT_VERB.CANCEL, "cancel", "X",     gp_face2);
     }
     

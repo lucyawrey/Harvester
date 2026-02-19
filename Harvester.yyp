@@ -387,6 +387,7 @@
     {"id":{"name":"spr_ts_forest","path":"sprites/spr_ts_forest/spr_ts_forest.yy",},},
     {"id":{"name":"spr_ts_objects","path":"sprites/spr_ts_objects/spr_ts_objects.yy",},},
     {"id":{"name":"spr_ts_town","path":"sprites/spr_ts_town/spr_ts_town.yy",},},
+    {"id":{"name":"ts_dungeon","path":"tilesets/ts_dungeon/ts_dungeon.yy",},},
     {"id":{"name":"ts_town","path":"tilesets/ts_town/ts_town.yy",},},
   ],
   "resourceType":"GMProject",
