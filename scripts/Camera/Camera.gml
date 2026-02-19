@@ -5,6 +5,8 @@
 #macro VIEW_HEIGHT (VIEW_TILE_HEIGHT * TILE_SIZE)
 #macro WINDOW_SCALE 3
 
+#macro camera global.__camera
+
 function setup_camera() {
     // Enable viewports
     view_enabled = true;
@@ -17,8 +19,8 @@ function setup_camera() {
     view_set_hport(0, VIEW_HEIGHT);
     
     // Set camera values
-    var _camera = camera_create_view(0, 0, VIEW_WIDTH, VIEW_HEIGHT, 0, -1, -1, -1, -1, -1);
-    view_set_camera(0, _camera);
+    var camera = camera_create_view(0, 0, VIEW_WIDTH, VIEW_HEIGHT, 0, -1, -1, -1, -1, -1);
+    view_set_camera(0, camera);
     
     // Scale game window
     var _dwidth = display_get_width();

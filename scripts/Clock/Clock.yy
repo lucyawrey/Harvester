@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Clock",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Clock",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
