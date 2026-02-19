@@ -1,4 +1,4 @@
-if (InputReleased(INPUT_VERB.ACCEPT)) {
+if (InputReleased(VERB.ACCEPT)) {
 	if (inside) {
 		layer_set_visible("InteriorWall", false);
 		layer_set_visible("InteriorFloor", false);
