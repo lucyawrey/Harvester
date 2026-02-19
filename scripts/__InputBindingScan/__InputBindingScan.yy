@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__InputBindingScan",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__InputBindingScan",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/extensions/input/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

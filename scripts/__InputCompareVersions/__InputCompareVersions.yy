@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__InputCompareVersions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__InputCompareVersions",
+  "parent":{
+    "name":"(System)",
+    "path":"folders/extensions/input/(System).yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

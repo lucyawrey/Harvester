@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"InputVibrateGetSupported",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"InputVibrateGetSupported",
+  "parent":{
+    "name":"Setup",
+    "path":"folders/extensions/input_plugins/Vibration/Setup.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

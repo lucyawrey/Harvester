@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"InputColorReset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"InputColorReset",
+  "parent":{
+    "name":"Color",
+    "path":"folders/extensions/input_plugins/Color.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

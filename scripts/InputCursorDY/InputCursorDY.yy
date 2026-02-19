@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"InputCursorDY",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"InputCursorDY",
+  "parent":{
+    "name":"Basics",
+    "path":"folders/extensions/input_plugins/Cursor/Basics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
