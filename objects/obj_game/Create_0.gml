@@ -1,6 +1,5 @@
 // Configure game settings
 gpu_set_tex_filter(false);
 setup_camera();
-
-// Configure game object variables
-inside = true;
+set_active_plane(PLANE.INTERIOR);
+hide_event_layers();

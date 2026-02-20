@@ -35,12 +35,5 @@ function __InputConfigVerbs() {
 	}
 
 	//Define a cluster of verbs for moving around
-	InputDefineCluster(
-		CLUSTER.NAVIGATION,
-		VERB.UP,
-		VERB.RIGHT,
-		VERB.DOWN,
-		VERB.LEFT,
-		1
-	);
+	InputDefineCluster(CLUSTER.NAVIGATION, VERB.UP, VERB.RIGHT, VERB.DOWN, VERB.LEFT, 1);
 }

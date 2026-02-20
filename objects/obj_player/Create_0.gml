@@ -3,6 +3,6 @@ next_image_index = undefined;
 anim_flag = false;
 
 function set_animation_alarm() {
-    alarm[0] = 15;
-    anim_flag = !anim_flag;
+	alarm[0] = 10;
+	anim_flag = !anim_flag;
 }

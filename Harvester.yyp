@@ -386,6 +386,7 @@
     {"id":{"name":"InputXYNewest","path":"scripts/InputXYNewest/InputXYNewest.yy",},},
     {"id":{"name":"InputXYOldest","path":"scripts/InputXYOldest/InputXYOldest.yy",},},
     {"id":{"name":"InputY","path":"scripts/InputY/InputY.yy",},},
+    {"id":{"name":"Plane","path":"scripts/Plane/Plane.yy",},},
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
     {"id":{"name":"Types","path":"scripts/Types/Types.yy",},},
     {"id":{"name":"Utilities","path":"scripts/Utilities/Utilities.yy",},},
