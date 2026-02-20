@@ -1,4 +1,4 @@
-facing_direction = VERB.DOWN;
+facing_direction = FACING.DOWN;
 next_image_index = undefined;
 anim_flag = false;
 
