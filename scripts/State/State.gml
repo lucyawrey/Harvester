@@ -12,7 +12,7 @@ state = {
 		day: 1,
 		season: 1,
 		year: 1,
-		time: 0,
+		time: time_to_tick("6:00"),
 	},
 	/* game_data/save_shared.json */
 	save_shared: {active_save_slot: 0},

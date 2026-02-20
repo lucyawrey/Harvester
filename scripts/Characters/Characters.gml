@@ -1,3 +1,5 @@
+#macro AUTO_MOVE_DELAY 10
+
 enum FACING {
 	DOWN,
 	LEFT,
@@ -21,3 +23,10 @@ enum SPRITE {
 }
 
 #macro VECTORS [{x: 0, y: 1}, {x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}]
+
+enum EVENT {
+	VOID = 0,
+	GROUND = 1,
+	WALL = 2,
+	DOOR = 3,
+}

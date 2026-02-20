@@ -27,5 +27,6 @@ function tick_to_time(_ticks) {
 	var _total_minutes = _ticks * MINUTES_PER_TICK;
 	var _hours = _total_minutes div MINUTES_PER_HOUR;
 	var _minutes = _total_minutes % MINUTES_PER_HOUR;
-	return $"{_hours}:{_minutes}";
+    var _leading = _minutes < 10 ? "0" : "";
+	return $"{_hours}:{_leading}{_minutes}";
 }
