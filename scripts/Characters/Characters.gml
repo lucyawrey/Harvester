@@ -1,8 +1,8 @@
 enum FACING {
-    DOWN,
-    LEFT,
-    RIGHT,
-    UP,
+	DOWN,
+	LEFT,
+	RIGHT,
+	UP,
 }
 
 enum SPRITE {
@@ -19,3 +19,5 @@ enum SPRITE {
 	UP = 10,
 	UP_WALK_2 = 11,
 }
+
+#macro VECTORS [{x: 0, y: 1}, {x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}]
