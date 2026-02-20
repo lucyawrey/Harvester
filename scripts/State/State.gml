@@ -17,7 +17,7 @@ state = {
 	/* game_data/save_shared.json */
 	save_shared: {active_save_slot: 0},
 	/* Non-saved global state */
-	active_plane: PLANE.INTERIOR,
+	player_active_plane: PLANE.INTERIOR,
 	characters: {},
 	characters_cache: {},
 };

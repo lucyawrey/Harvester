@@ -14,7 +14,7 @@ function set_active_plane(_new_plane) {
 		}
 	}
 	obj_player.layer = get_object_layer_id(_new_plane);
-	state.active_plane = _new_plane;
+	state.player_active_plane = _new_plane;
 }
 
 function get_object_layer_id(_plane) {
