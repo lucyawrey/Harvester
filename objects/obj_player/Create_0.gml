@@ -24,6 +24,6 @@ function move(_direction, _tiles) {
 			state.player_active_plane == PLANE.INTERIOR ? PLANE.EXTERIOR : PLANE.INTERIOR
 		);
 	}
-    
-    tick();
+
+	tick();
 }

@@ -25,11 +25,11 @@ if (InputCheck(VERB.DOWN) && auto_move_timer == 0) {
 }
 
 if (InputCheckMany([VERB.DOWN, VERB.LEFT, VERB.RIGHT, VERB.UP])) {
-    if (auto_move_timer >= AUTO_MOVE_DELAY) {
-        auto_move_timer = 0;
-    } else {
-        auto_move_timer++;
-    }
+	if (auto_move_timer >= AUTO_MOVE_DELAY) {
+		auto_move_timer = 0;
+	} else {
+		auto_move_timer++;
+	}
 } else {
-    auto_move_timer = 0;
+	auto_move_timer = 0;
 }
