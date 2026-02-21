@@ -12,8 +12,16 @@ function tick(_amount = 1) {
     if (state.save.time == TICKS_PER_DAY) {
         state.save.time = 0;
         state.save.day++;
+        if (state.save.day > DAYS_PER_SEASON) {
+            state.save.day = 1;
+            state.save.season++;
+            if (state.save.season > SEASONS_PER_YEAR) {
+                state.save.season = 1;
+                state.save.year++;
+            }
+        }
     }
-    set_light();
+    set_light_for_time(state.save.time);
 }
 
 function time_to_tick(_time) {

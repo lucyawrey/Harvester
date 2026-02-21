@@ -1,21 +1,15 @@
-enum LIGHT_TIME {
-    DAY = 0,
-    NIGHT = 1,
+#macro SUN layer_background_get_id("Sun")
+#macro MOON layer_background_get_id("Moon")
+
+function set_light_for_time(_time) {
+    var _time_factor = _time >= time_to_tick("6:00") && _time < time_to_tick("18:00") ? 5 : -30;
+    var _r = 3 * _time_factor, _g = 2 * _time_factor, _b = 1 * _time_factor;
+    set_light_layer_background_blends(_r, _g, _b);
 }
 
-#macro LIGHT_LAYERS ["Day", "Night"]
-#macro DAY_BG layer_background_get_id("Day")
-#macro NIGHT_BG layer_background_get_id("Night")
-
-function set_light() {
-    var _time = state.save.time;
-    var _light_time = _time > time_to_tick("5:30") && _time < time_to_tick("19:00") ? LIGHT_TIME.DAY : LIGHT_TIME.NIGHT;
-    set_light_layers(_light_time);
-}
-
-// TODO chnage to show both additive and negative layers always, only chnage tinting
-function set_light_layers(_light_time) {
-    for (var _i = 0; _i < array_length(LIGHT_LAYERS); _i++) {
-    	layer_set_visible(LIGHT_LAYERS[_i], _light_time == _i);
-    }
+function set_light_layer_background_blends(_r, _g, _b) {
+    var c_sun = make_color_rgb(clamp(_r, 0, 255), clamp(_g, 0, 255), clamp(_b, 0, 255));
+    var c_moon = make_color_rgb(-clamp(_r, -255, 0), -clamp(_g, -255, 0), -clamp(_b, -255, 0));
+    layer_background_blend(SUN, c_sun);
+    layer_background_blend(MOON, c_moon);
 }

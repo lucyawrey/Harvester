@@ -6,6 +6,7 @@ enum PLANE {
 #macro PLANES [["IObject", "I2", "I1"], ["EObject", "E2", "E1"]]
 #macro OBJECT_LAYERS ["IObject", "EObject"]
 #macro EVENT_LAYERS ["IEvent", "EEvent"]
+#macro LIGHT_LAYERS ["Sun", "Moon"]
 
 function set_active_plane(_new_plane) {
 	for (var _i = 0; _i < array_length(PLANES); _i++) {
@@ -21,8 +22,9 @@ function get_object_layer_id(_plane) {
 	return layer_get_id(OBJECT_LAYERS[_plane]);
 }
 
-function hide_event_layers() {
-	for (var _i = 0; _i < array_length(EVENT_LAYERS); _i++) {
+function layer_setup() {
+	for (var _i = 0; _i < 2; _i++) {
 		layer_set_visible(EVENT_LAYERS[_i], false);
+        layer_set_visible(LIGHT_LAYERS[_i], true);
 	}
 }
