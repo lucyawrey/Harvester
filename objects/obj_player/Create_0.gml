@@ -19,11 +19,7 @@ function move(_direction, _tiles) {
 	if (_target_tile_event != EVENT.WALL) {
 		x = _nx;
 		y = _ny;
-
-		var _target_item = instance_position(_nx + 2, _ny + 2, obj_item);
-		if (_target_item != noone) {
-			_target_item.collect();
-		}
+        try_collect_item(_nx, _ny);
 	}
 	if (_target_tile_event == EVENT.DOOR) {
 		set_active_plane(
@@ -51,7 +47,8 @@ function interact() {
 		// TODO prevent infinite planting
 		instance_create_layer(_tx, _ty, get_object_layer(), obj_crop);
 	}
-	if (_target_crop != noone) {
+    var _item = try_collect_item(_tx, _ty);
+	if (!_item && _target_crop != noone) {
 		_target_crop.interact();
 	}
 
