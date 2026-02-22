@@ -393,6 +393,7 @@
     {"id":{"name":"InputXYNewest","path":"scripts/InputXYNewest/InputXYNewest.yy",},},
     {"id":{"name":"InputXYOldest","path":"scripts/InputXYOldest/InputXYOldest.yy",},},
     {"id":{"name":"InputY","path":"scripts/InputY/InputY.yy",},},
+    {"id":{"name":"Items","path":"scripts/Items/Items.yy",},},
     {"id":{"name":"Light","path":"scripts/Light/Light.yy",},},
     {"id":{"name":"Plane","path":"scripts/Plane/Plane.yy",},},
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
