@@ -30,13 +30,23 @@ function move(_direction, _tiles) {
 
 function interact() {
 	var _event_tilemap = get_event_tilemap();
+    var _2_tilemap = get_2_tilemap();
 	var _tx = x + struct_get(VECTORS[facing_direction], "x") * TILE_SIZE;
 	var _ty = y + struct_get(VECTORS[facing_direction], "y") * TILE_SIZE;
 	var _target_tile_event = tilemap_get_at_pixel(_event_tilemap, _tx, _ty);
-    log(_target_tile_event);
+    
+    if(_target_tile_event == EVENT.SOIL) {
+        tilemap_set_at_pixel(_event_tilemap, EVENT.TILLED, _tx, _ty);
+        tilemap_set_at_pixel(_2_tilemap, TILE.TILLED, _tx, _ty);
+    }
+
     tick();
 }
 
 function get_event_tilemap() {
     return layer_tilemap_get_id(EVENT_LAYERS[state.player_active_plane]);
+}
+
+function get_2_tilemap() {
+    return layer_tilemap_get_id(LAYERS_2[state.player_active_plane]);
 }

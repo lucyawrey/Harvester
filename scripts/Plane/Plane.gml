@@ -6,6 +6,7 @@ enum PLANE {
 #macro PLANES [["IObject", "I2", "I1"], ["EObject", "E2", "E1"]]
 #macro OBJECT_LAYERS ["IObject", "EObject"]
 #macro EVENT_LAYERS ["IEvent", "EEvent"]
+#macro LAYERS_2 ["I2", "E2"]
 #macro LIGHT_LAYERS ["Sun", "Moon"]
 
 function set_active_plane(_new_plane) {
