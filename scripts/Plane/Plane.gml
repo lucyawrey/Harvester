@@ -25,6 +25,6 @@ function get_object_layer_id(_plane) {
 function layer_setup() {
 	for (var _i = 0; _i < 2; _i++) {
 		layer_set_visible(EVENT_LAYERS[_i], false);
-        layer_set_visible(LIGHT_LAYERS[_i], true);
+		layer_set_visible(LIGHT_LAYERS[_i], true);
 	}
 }

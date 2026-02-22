@@ -29,6 +29,6 @@ enum EVENT {
 	GROUND = 1,
 	WALL = 2,
 	DOOR = 3,
-    SOIL = 4,
-    TILLED = 5,
+	SOIL = 4,
+	TILLED = 5,
 }
