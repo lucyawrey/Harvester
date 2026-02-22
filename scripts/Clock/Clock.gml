@@ -1,17 +1,30 @@
-#macro SEASONS_PER_YEAR 4
 #macro DAYS_PER_SEASON 28
 #macro MINUTES_PER_TICK 5
 
+#macro SEASONS_PER_YEAR 4
 #macro HOURS_PER_DAY 24
 #macro MINUTES_PER_HOUR 60
 #macro MINUTES_PER_DAY (HOURS_PER_DAY * MINUTES_PER_HOUR)
 #macro TICKS_PER_DAY (MINUTES_PER_DAY / MINUTES_PER_TICK)
+
+enum SEASON {
+	SPRING = 1,
+	SUMMER = 2,
+	FALL = 3,
+	WINTER = 4,
+}
+#macro SEASONS ["Void", "Spring", "Summer", "Fall", "Winter"]
 
 function tick(_amount = 1) {
 	state.save.time += _amount;
 	if (state.save.time == TICKS_PER_DAY) {
 		state.save.time = 0;
 		state.save.day++;
+
+		with (obj_crop) {
+			grow();
+		}
+
 		if (state.save.day > DAYS_PER_SEASON) {
 			state.save.day = 1;
 			state.save.season++;

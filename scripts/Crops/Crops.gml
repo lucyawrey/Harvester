@@ -1,0 +1,1 @@
+#macro VISUAL_GROWTH_STAGES 3

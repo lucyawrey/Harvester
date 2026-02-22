@@ -9,15 +9,21 @@ function set_animation_alarm() {
 }
 
 function move(_direction, _tiles) {
+	facing_direction = _direction;
 	var _event_tilemap = get_event_tilemap();
 	var _current_tile_event = tilemap_get_at_pixel(_event_tilemap, x, y);
-	var _nx = x + struct_get(VECTORS[_direction], "x") * _tiles * TILE_SIZE;
-	var _ny = y + struct_get(VECTORS[_direction], "y") * _tiles * TILE_SIZE;
+	var _nx = x + struct_get(VECTORS[facing_direction], "x") * _tiles * TILE_SIZE;
+	var _ny = y + struct_get(VECTORS[facing_direction], "y") * _tiles * TILE_SIZE;
 	var _target_tile_event = tilemap_get_at_pixel(_event_tilemap, _nx, _ny);
 
 	if (_target_tile_event != EVENT.WALL) {
 		x = _nx;
 		y = _ny;
+
+		var _target_item = instance_position(_nx + 2, _ny + 2, obj_item);
+		if (_target_item != noone) {
+			_target_item.collect();
+		}
 	}
 	if (_target_tile_event == EVENT.DOOR) {
 		set_active_plane(
@@ -30,23 +36,36 @@ function move(_direction, _tiles) {
 
 function interact() {
 	var _event_tilemap = get_event_tilemap();
-    var _2_tilemap = get_2_tilemap();
+	var _2_tilemap = get_2_tilemap();
 	var _tx = x + struct_get(VECTORS[facing_direction], "x") * TILE_SIZE;
 	var _ty = y + struct_get(VECTORS[facing_direction], "y") * TILE_SIZE;
 	var _target_tile_event = tilemap_get_at_pixel(_event_tilemap, _tx, _ty);
-    
-    if(_target_tile_event == EVENT.SOIL) {
-        tilemap_set_at_pixel(_event_tilemap, EVENT.TILLED, _tx, _ty);
-        tilemap_set_at_pixel(_2_tilemap, TILE.TILLED, _tx, _ty);
-    }
 
-    tick();
+	if (_target_tile_event == EVENT.SOIL) {
+		tilemap_set_at_pixel(_event_tilemap, EVENT.TILLED, _tx, _ty);
+		tilemap_set_at_pixel(_2_tilemap, TILE.TILLED, _tx, _ty);
+	}
+
+	var _target_crop = instance_position(_tx, _ty, obj_crop);
+	if (_target_tile_event == EVENT.TILLED && _target_crop == noone) {
+		// TODO prevent infinite planting
+		instance_create_layer(_tx, _ty, get_object_layer(), obj_crop);
+	}
+	if (_target_crop != noone) {
+		_target_crop.interact();
+	}
+
+	tick();
 }
 
 function get_event_tilemap() {
-    return layer_tilemap_get_id(EVENT_LAYERS[state.player_active_plane]);
+	return layer_tilemap_get_id(EVENT_LAYERS[state.player_active_plane]);
 }
 
 function get_2_tilemap() {
-    return layer_tilemap_get_id(LAYERS_2[state.player_active_plane]);
+	return layer_tilemap_get_id(LAYERS_2[state.player_active_plane]);
+}
+
+function get_object_layer() {
+	return layer_get_id(OBJECT_LAYERS[state.player_active_plane]);
 }
