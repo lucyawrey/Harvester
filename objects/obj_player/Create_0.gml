@@ -9,7 +9,7 @@ function set_animation_alarm() {
 }
 
 function move(_direction, _tiles) {
-	var _event_tilemap = layer_tilemap_get_id(EVENT_LAYERS[state.player_active_plane]);
+	var _event_tilemap = get_event_tilemap();
 	var _current_tile_event = tilemap_get_at_pixel(_event_tilemap, x, y);
 	var _nx = x + struct_get(VECTORS[_direction], "x") * _tiles * TILE_SIZE;
 	var _ny = y + struct_get(VECTORS[_direction], "y") * _tiles * TILE_SIZE;
@@ -26,4 +26,17 @@ function move(_direction, _tiles) {
 	}
 
 	tick();
+}
+
+function interact() {
+	var _event_tilemap = get_event_tilemap();
+	var _tx = x + struct_get(VECTORS[facing_direction], "x") * TILE_SIZE;
+	var _ty = y + struct_get(VECTORS[facing_direction], "y") * TILE_SIZE;
+	var _target_tile_event = tilemap_get_at_pixel(_event_tilemap, _tx, _ty);
+    log(_target_tile_event);
+    tick();
+}
+
+function get_event_tilemap() {
+    return layer_tilemap_get_id(EVENT_LAYERS[state.player_active_plane]);
 }

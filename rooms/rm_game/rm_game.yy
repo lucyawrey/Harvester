@@ -37,9 +37,9 @@
       ],"name":"Lights","properties":[],"resourceType":"GMRLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRLayer":"","%Name":"Exterior","depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[
         {"$GMRTileLayer":"","%Name":"EEvent","depth":1000,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"EEvent","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":21,"TileCompressedData":[
-              -28,2,-2,4,-2,2,-3,4,3,2,4,4,-9,2,-3,4,-3,2,-3,4,-3,1,-9,2,-2,4,-5,2,-2,4,5,1,3,1,4,4,-8,2,1,4,-5,2,
-              -2,4,-3,1,-2,4,-8,2,1,4,-5,2,1,4,-5,1,-8,2,-2,4,-5,2,2,4,1,-3,4,1,1,-7,2,-3,4,-5,2,2,4,1,-3,4,2,1,4,
-              -6,2,-3,4,-2,2,5,3,2,2,4,1,-3,4,2,1,4,-7,2,-3,4,-3,1,1,4,-6,1,-8,2,-4,4,-4,1,-4,4,-25,2,
+              -28,2,-2,4,-2,2,-3,4,3,2,4,4,-9,2,-3,4,-3,2,-3,4,-3,1,-9,2,-2,4,-5,2,-2,4,-3,1,-2,4,-8,2,1,4,-5,2,-2,
+              4,-3,1,-2,4,-8,2,1,4,-5,2,1,4,-5,1,-8,2,-2,4,-5,2,2,4,1,-3,4,1,1,-7,2,-3,4,-5,2,2,4,1,-3,4,2,1,4,-6,
+              2,-3,4,-2,2,5,3,2,2,4,1,-3,4,2,1,4,-7,2,-3,4,-3,1,1,4,-6,1,-8,2,-4,4,-4,1,-4,4,-25,2,
             ],"TileDataFormat":1,},"tilesetId":{"name":"ts_events","path":"tilesets/ts_events/ts_events.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
         {"$GMRTileLayer":"","%Name":"E3","depth":1100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"E3","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":0,"SerialiseWidth":0,"TileSerialiseData":[],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
         {"$GMRInstanceLayer":"","%Name":"EObject","depth":1200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"EObject","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

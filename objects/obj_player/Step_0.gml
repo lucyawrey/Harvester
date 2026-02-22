@@ -33,3 +33,7 @@ if (InputCheckMany([VERB.DOWN, VERB.LEFT, VERB.RIGHT, VERB.UP])) {
 } else {
 	auto_move_timer = 0;
 }
+
+if (InputPressed(VERB.ACCEPT)) {
+    interact();
+}
