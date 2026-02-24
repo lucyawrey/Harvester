@@ -44,11 +44,12 @@ if (!is_moving) {
 			y = ty;
 		}
 	} else {
-        if (queue_interact) {
-            queue_interact = false;
-            interact();
-        }
+        arrive();
 		is_moving = false;
 	}
 	move_timer--;
+}
+
+if(InputCheck(VERB.CANCEL)) {
+    tick();
 }
