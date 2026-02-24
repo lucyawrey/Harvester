@@ -1,8 +1,9 @@
 // Config
-move_speed = 1.5;
-move_delay = TILE_SIZE / move_speed;
+base_move_speed = 1;
 
 // State
+move_speed = base_move_speed;
+move_delay = TILE_SIZE / move_speed;
 facing_direction = FACING.DOWN;
 target_image_index = SPRITE.DOWN;
 animation_toggle = false;
