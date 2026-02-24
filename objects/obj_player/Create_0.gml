@@ -1,12 +1,16 @@
-facing_direction = FACING.DOWN;
-next_image_index = undefined;
-anim_flag = false;
-auto_move_timer = 0;
+// Config
+move_speed = 1;
+move_delay = TILE_SIZE / move_speed;
 
-function set_animation_alarm() {
-	alarm[0] = 8;
-	anim_flag = !anim_flag;
-}
+// State
+facing_direction = FACING.DOWN;
+target_image_index = SPRITE.DOWN;
+animation_toggle = false;
+tx = x;
+ty = y;
+is_moving = false;
+move_timer = 0;
+queue_interact = true;
 
 function move(_direction, _tiles) {
 	facing_direction = _direction;
@@ -17,10 +21,14 @@ function move(_direction, _tiles) {
 	var _target_tile_event = tilemap_get_at_pixel(_event_tilemap, _nx, _ny);
 
 	if (_target_tile_event != EVENT.WALL) {
-		x = _nx;
-		y = _ny;
-        try_collect_item(_nx, _ny);
+		tx = _nx;
+		ty = _ny;
+		try_collect_item(_nx, _ny);
 	}
+
+	is_moving = true;
+	move_timer = move_delay;
+
 	if (_target_tile_event == EVENT.DOOR) {
 		set_active_plane(
 			state.player_active_plane == PLANE.INTERIOR ? PLANE.EXTERIOR : PLANE.INTERIOR
@@ -47,7 +55,7 @@ function interact() {
 		// TODO prevent infinite planting
 		instance_create_layer(_tx, _ty, get_object_layer(), obj_crop);
 	}
-    var _item = try_collect_item(_tx, _ty);
+	var _item = try_collect_item(_tx, _ty);
 	if (!_item && _target_crop != noone) {
 		_target_crop.interact();
 	}

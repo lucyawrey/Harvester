@@ -1,8 +1,8 @@
-// Crop config
+// Config
 growth_time_in_days = 3;
 viable_seasons = [SEASON.SPRING, SEASON.SUMMER];
 
-// Crop state
+// State
 current_growth_stage = 1;
 
 function grow() {
