@@ -1,5 +1,5 @@
 // Config
-move_speed = 1;
+move_speed = 1.5;
 move_delay = TILE_SIZE / move_speed;
 
 // State
