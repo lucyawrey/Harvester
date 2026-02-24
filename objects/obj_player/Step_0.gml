@@ -1,11 +1,11 @@
 if (is_moving) {
 	if (move_timer < move_delay / 2) {
-        if (InputCheck(VERB.ACCEPT)) {
-            queue_interact = true;
-        }
-        image_index = target_image_index;
+		if (InputCheck(VERB.ACCEPT)) {
+			queue_interact = true;
+		}
+		image_index = target_image_index;
 	}
-    
+
 	if (x != tx || y != ty || move_timer > 0) {
 		x = x + sign(tx - x) * move_speed;
 		y = y + sign(ty - y) * move_speed;
@@ -17,13 +17,13 @@ if (is_moving) {
 			y = ty;
 		}
 	} else {
-        x = tx;
-        y = ty;
-        arrive();
+		x = tx;
+		y = ty;
+		arrive();
 		is_moving = false;
 	}
-    
-    move_timer--;
+
+	move_timer--;
 }
 
 if (!is_moving) {
@@ -48,7 +48,14 @@ if (!is_moving) {
 		animation_toggle = !animation_toggle;
 		target_image_index = SPRITE.UP;
 	}
-    if (InputPressed(VERB.ACCEPT)) {
+	if (InputPressed(VERB.ACCEPT)) {
 		interact();
 	}
 }
+
+// Camera
+camera_set_view_pos(
+	camera,
+	x - (VIEW_WIDTH - TILE_SIZE) / 2,
+	y - (VIEW_HEIGHT - TILE_SIZE) / 2
+);

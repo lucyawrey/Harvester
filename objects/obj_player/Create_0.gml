@@ -25,9 +25,9 @@ function move(_direction, _tiles) {
 		tx = _nx;
 		ty = _ny;
 	}
-    if (_target_tile_event == EVENT.DOOR) {
-        queue_door = true;
-    }
+	if (_target_tile_event == EVENT.DOOR) {
+		queue_door = true;
+	}
 	is_moving = true;
 	move_timer = move_delay;
 
@@ -46,7 +46,6 @@ function interact() {
 
 	var _target_crop = instance_position(_tx, _ty, obj_crop);
 	if (_target_tile_event == EVENT.TILLED && _target_crop == noone) {
-		// TODO prevent infinite planting
 		instance_create_layer(_tx, _ty, get_object_layer(), obj_crop);
 	}
 	var _item = try_collect_item(_tx, _ty);
@@ -58,17 +57,17 @@ function interact() {
 }
 
 function arrive() {
-    if (queue_interact) {
-        queue_interact = false;
-        interact();
-    }
-    if (queue_door) {
+	if (queue_interact) {
+		queue_interact = false;
+		interact();
+	}
+	if (queue_door) {
 		set_active_plane(
 			state.player_active_plane == PLANE.INTERIOR ? PLANE.EXTERIOR : PLANE.INTERIOR
 		);
-        queue_door = false;
+		queue_door = false;
 	}
-    try_collect_item(x, y);
+	try_collect_item(x, y);
 }
 
 function get_event_tilemap() {

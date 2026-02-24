@@ -17,16 +17,11 @@ function setup_camera() {
 	view_set_yport(0, 0);
 	view_set_wport(0, VIEW_WIDTH);
 	view_set_hport(0, VIEW_HEIGHT);
-    display_set_gui_size(VIEW_WIDTH, VIEW_HEIGHT);
+	display_set_gui_size(VIEW_WIDTH, VIEW_HEIGHT);
 
 	// Set camera values
 	camera = camera_create_view(0, 0, VIEW_WIDTH, VIEW_HEIGHT, 0, -1, -1, -1, -1, -1);
 	view_set_camera(0, camera);
-    // TODO better camera
-    camera_set_view_target(camera, obj_player);
-    camera_set_view_speed(camera, obj_player.move_speed, obj_player.move_speed);
-    camera_set_view_border(camera, TILE_SIZE * 9, TILE_SIZE * 5);
-    
 
 	// Scale game window
 	var _dwidth = display_get_width();
