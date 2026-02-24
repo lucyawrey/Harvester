@@ -27,22 +27,22 @@ if (is_moving) {
 }
 
 if (!is_moving) {
-	if (InputCheck(VERB.DOWN)) {
+	if (InputY(CLUSTER.NAVIGATION) > DEADZONE) {
 		move(FACING.DOWN, 1);
 		image_index = animation_toggle ? SPRITE.DOWN_WALK_2 : SPRITE.DOWN_WALK_1;
 		animation_toggle = !animation_toggle;
 		target_image_index = SPRITE.DOWN;
-	} else if (InputCheck(VERB.LEFT)) {
+	} else if (InputX(CLUSTER.NAVIGATION) < -DEADZONE) {
 		move(FACING.LEFT, 1);
 		image_index = animation_toggle ? SPRITE.LEFT_WALK_2 : SPRITE.LEFT_WALK_1;
 		animation_toggle = !animation_toggle;
 		target_image_index = SPRITE.LEFT;
-	} else if (InputCheck(VERB.RIGHT)) {
+	} else if (InputX(CLUSTER.NAVIGATION) > DEADZONE) {
 		move(FACING.RIGHT, 1);
 		image_index = animation_toggle ? SPRITE.RIGHT_WALK_2 : SPRITE.RIGHT_WALK_1;
 		animation_toggle = !animation_toggle;
 		target_image_index = SPRITE.RIGHT;
-	} else if (InputCheck(VERB.UP)) {
+	} else if (InputY(CLUSTER.NAVIGATION) < -DEADZONE) {
 		move(FACING.UP, 1);
 		image_index = animation_toggle ? SPRITE.UP_WALK_2 : SPRITE.UP_WALK_1;
 		animation_toggle = !animation_toggle;

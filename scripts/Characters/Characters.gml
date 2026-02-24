@@ -23,6 +23,7 @@ enum SPRITE {
 }
 
 #macro VECTORS [{x: 0, y: 1}, {x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}]
+#macro DEADZONE 0.5
 
 enum TILE {
 	TILLED = 41,
