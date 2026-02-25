@@ -1,3 +1,7 @@
+// TODO less jittery sprinting
+move_speed = InputCheck(VERB.CANCEL) ? base_move_speed * 2 : base_move_speed;
+move_delay = TILE_SIZE / move_speed;
+
 if (is_moving) {
 	if (move_timer < move_delay / 2) {
 		if (InputCheck(VERB.ACCEPT)) {

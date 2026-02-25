@@ -28,4 +28,5 @@ function layer_setup() {
 		layer_set_visible(EVENT_LAYERS[_i], false);
 		layer_set_visible(LIGHT_LAYERS[_i], true);
 	}
+    layer_set_visible("Grid", false);
 }

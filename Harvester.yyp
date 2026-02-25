@@ -402,6 +402,7 @@
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
     {"id":{"name":"Types","path":"scripts/Types/Types.yy",},},
     {"id":{"name":"Utilities","path":"scripts/Utilities/Utilities.yy",},},
+    {"id":{"name":"spr_grid","path":"sprites/spr_grid/spr_grid.yy",},},
     {"id":{"name":"spr_player_fem","path":"sprites/spr_player_fem/spr_player_fem.yy",},},
     {"id":{"name":"spr_tomato_item","path":"sprites/spr_tomato_item/spr_tomato_item.yy",},},
     {"id":{"name":"spr_tomato_plant","path":"sprites/spr_tomato_plant/spr_tomato_plant.yy",},},
