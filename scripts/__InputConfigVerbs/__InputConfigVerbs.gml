@@ -31,7 +31,7 @@ function __InputConfigVerbs() {
 		InputDefineVerb(VERB.CANCEL, "cancel", undefined, gp_face1); // !!
 	} else {
 		InputDefineVerb(VERB.ACCEPT, "accept", ["Z", vk_space, mb_left], gp_face1);
-		InputDefineVerb(VERB.CANCEL, "cancel", ["X", "E", mb_right], gp_face2);
+		InputDefineVerb(VERB.CANCEL, "cancel", ["X", vk_shift, mb_right], gp_face2);
 	}
 
 	//Define a cluster of verbs for moving around

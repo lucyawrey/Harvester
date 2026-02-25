@@ -29,7 +29,6 @@ function move(_direction, _tiles) {
 		queue_door = true;
 	}
 	is_moving = true;
-	move_timer = move_delay;
 
 	tick();
 }
