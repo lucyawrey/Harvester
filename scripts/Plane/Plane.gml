@@ -15,8 +15,17 @@ function set_active_plane(_new_plane) {
 			layer_set_visible(PLANES[_i][_j], (_i == _new_plane));
 		}
 	}
-	obj_player.layer = get_object_layer_id(_new_plane);
-	state.player_active_plane = _new_plane;
+}
+
+function get_plane_from_layer(_layer) {
+    var _name = layer_get_name(_layer);
+    for (var _i = 0; _i < array_length(PLANES); _i++) {
+		for (var _j = 0; _j < array_length(PLANES[_i]); _j++) {
+			if (_name == PLANES[_i][_j]) {
+                return _i;
+            }
+		}
+	}
 }
 
 function get_object_layer_id(_plane) {
@@ -28,5 +37,5 @@ function layer_setup() {
 		layer_set_visible(EVENT_LAYERS[_i], false);
 		layer_set_visible(LIGHT_LAYERS[_i], true);
 	}
-    layer_set_visible("Grid", false);
+	layer_set_visible("Grid", false);
 }

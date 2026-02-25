@@ -1,10 +1,10 @@
 #macro AUTO_MOVE_DELAY 10
 
 enum FACING {
-	DOWN,
-	LEFT,
-	RIGHT,
-	UP,
+	DOWN = 0,
+	LEFT = 1,
+	RIGHT = 2,
+	UP = 3,
 }
 
 enum SPRITE {
