@@ -18,12 +18,12 @@ function set_active_plane(_new_plane) {
 }
 
 function get_plane_from_layer(_layer) {
-    var _name = layer_get_name(_layer);
-    for (var _i = 0; _i < array_length(PLANES); _i++) {
+	var _name = layer_get_name(_layer);
+	for (var _i = 0; _i < array_length(PLANES); _i++) {
 		for (var _j = 0; _j < array_length(PLANES[_i]); _j++) {
 			if (_name == PLANES[_i][_j]) {
-                return _i;
-            }
+				return _i;
+			}
 		}
 	}
 }

@@ -24,8 +24,9 @@ function move(_direction, _tiles) {
 	var _ty = y + struct_get(VECTORS[facing_direction], "y") * _tiles * TILE_SIZE;
 	var _target_tile_event = tilemap_get_at_pixel(get_event_tilemap(), _tx, _ty);
 
-    var _target_character = instance_position(_tx, _ty, obj_character);
-    
+	var _target_character = instance_position(_tx, _ty, obj_character);
+
+	// TODO check collision based on future target character position
 	if (_target_tile_event != EVENT.WALL && _target_character == noone) {
 		tx = _tx;
 		ty = _ty;
@@ -35,7 +36,9 @@ function move(_direction, _tiles) {
 	}
 	is_moving = true;
 
-	tick();
+	if (is_player) {
+		tick();
+	}
 }
 
 function interact() {
@@ -57,7 +60,9 @@ function interact() {
 		_target_crop.interact();
 	}
 
-	tick();
+	if (is_player) {
+		tick();
+	}
 }
 
 function arrive() {

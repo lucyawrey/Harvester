@@ -16,6 +16,10 @@ enum SEASON {
 #macro SEASONS ["Void", "Spring", "Summer", "Fall", "Winter"]
 
 function tick(_amount = 1) {
+	with (obj_npc) {
+		on_tick();
+	}
+
 	state.save.time += _amount;
 	if (state.save.time == TICKS_PER_DAY) {
 		state.save.time = 0;
