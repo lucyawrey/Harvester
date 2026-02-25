@@ -13,6 +13,10 @@ if (!is_moving) {
 	if (InputPressed(VERB.ACCEPT)) {
 		interact();
 	}
+} else if (move_timer > move_delay / 2) {
+	if (InputCheck(VERB.ACCEPT)) {
+		queue_interact = true;
+	}
 }
 
 // Camera

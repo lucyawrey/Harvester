@@ -36,10 +36,10 @@ function move(_direction, _tiles) {
 	}
 	is_moving = true;
 
-    target_image_index = _direction * 3 + 1;
-    image_index = target_image_index + (animation_toggle ? 1 : -1);
-    animation_toggle = !animation_toggle;
-    
+	target_image_index = _direction * 3 + 1;
+	image_index = target_image_index + (animation_toggle ? 1 : -1);
+	animation_toggle = !animation_toggle;
+
 	if (is_player) {
 		tick();
 	}

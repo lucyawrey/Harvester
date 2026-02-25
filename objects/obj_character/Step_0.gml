@@ -4,9 +4,6 @@ move_delay = TILE_SIZE / move_speed;
 
 if (is_moving) {
 	if (move_timer > move_delay / 2) {
-		if (InputCheck(VERB.ACCEPT)) {
-			queue_interact = true;
-		}
 		image_index = target_image_index;
 	}
 
