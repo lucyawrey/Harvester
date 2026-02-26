@@ -1,5 +1,7 @@
 event_inherited();
 
 function on_tick() {
-	move(irandom_range(0, 3), 1);
+    if (irandom_range(0, 1)) {
+        move(point_facing(tx, ty, obj_player.tx, obj_player.ty), 1);
+    }
 }
