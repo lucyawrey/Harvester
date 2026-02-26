@@ -20,8 +20,8 @@ queue_door = false;
 function move(_direction, _tiles) {
 	facing_direction = _direction;
 	var _current_tile_event = tilemap_get_at_pixel(get_event_tilemap(), x, y);
-	var _tx = x + struct_get(VECTORS[facing_direction], "x") * _tiles * TILE_SIZE;
-	var _ty = y + struct_get(VECTORS[facing_direction], "y") * _tiles * TILE_SIZE;
+	var _tx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles * TILE_SIZE;
+	var _ty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles * TILE_SIZE;
 	var _target_tile_event = tilemap_get_at_pixel(get_event_tilemap(), _tx, _ty);
 
 	var _target_character = instance_position(_tx, _ty, obj_character);
