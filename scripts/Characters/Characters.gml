@@ -37,3 +37,19 @@ enum EVENT {
 	SOIL = 4,
 	TILLED = 5,
 }
+
+function pixel(_tiles) {
+    return _tiles * TILE_SIZE;
+}
+
+function get_facing(_degree) {
+    if (_degree >= 135 && _degree < 225) {
+        return FACING.DOWN;
+    } else if (_degree >= 225 && _degree < 315) {
+        return FACING.LEFT;
+    } if (_degree >= 45 && _degree < 135) {
+        return FACING.RIGHT;
+    } else {
+        return FACING.UP;
+    }
+}

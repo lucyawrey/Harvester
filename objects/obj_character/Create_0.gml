@@ -5,14 +5,14 @@ image_index = SPRITE.DOWN;
 
 // State
 current_plane = get_plane_from_layer(layer);
+tx = tilemap_get_cell_x_at_pixel(get_event_tilemap(), x, y);
+ty = tilemap_get_cell_y_at_pixel(get_event_tilemap(), x, y);
+is_moving = false;
+facing_direction = FACING.DOWN;
 move_speed = base_move_speed;
 move_delay = TILE_SIZE / move_speed;
-facing_direction = FACING.DOWN;
 target_image_index = SPRITE.DOWN;
 animation_toggle = false;
-tx = x;
-ty = y;
-is_moving = false;
 move_timer = 0;
 queue_interact = false;
 queue_door = false;
@@ -20,16 +20,15 @@ queue_door = false;
 function move(_direction, _tiles) {
 	facing_direction = _direction;
 	var _current_tile_event = tilemap_get_at_pixel(get_event_tilemap(), x, y);
-	var _tx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles * TILE_SIZE;
-	var _ty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles * TILE_SIZE;
-	var _target_tile_event = tilemap_get_at_pixel(get_event_tilemap(), _tx, _ty);
+	var _ntx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles;
+	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
+	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
 
-	var _target_character = instance_position(_tx, _ty, obj_character);
+	var _target_character = get_object(_ntx, _nty, obj_character);
 
-	// TODO check collision based on future target character position
 	if (_target_tile_event != EVENT.WALL && _target_character == noone) {
-		tx = _tx;
-		ty = _ty;
+		tx = _ntx;
+		ty = _nty;
 	}
 	if (_target_tile_event == EVENT.DOOR) {
 		queue_door = true;
@@ -46,20 +45,20 @@ function move(_direction, _tiles) {
 }
 
 function interact() {
-	var _tx = x + struct_get(VECTORS[facing_direction], "x") * TILE_SIZE;
-	var _ty = y + struct_get(VECTORS[facing_direction], "y") * TILE_SIZE;
-	var _target_tile_event = tilemap_get_at_pixel(get_event_tilemap(), _tx, _ty);
+	var _ntx = tx + struct_get(VECTORS[facing_direction], "x");
+	var _nty = ty + struct_get(VECTORS[facing_direction], "y");
+	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
 
 	if (_target_tile_event == EVENT.SOIL) {
-		tilemap_set_at_pixel(get_event_tilemap(), EVENT.TILLED, _tx, _ty);
-		tilemap_set_at_pixel(get_2_tilemap(), TILE.TILLED, _tx, _ty);
+		tilemap_set(get_event_tilemap(), EVENT.TILLED, _ntx, _nty);
+		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
 	}
 
-	var _target_crop = instance_position(_tx, _ty, obj_crop);
+	var _target_crop = get_object(_ntx, _nty, obj_crop);
 	if (_target_tile_event == EVENT.TILLED && _target_crop == noone) {
-		instance_create_layer(_tx, _ty, get_object_layer(), obj_crop);
+		instance_create_layer(pixel(_ntx), pixel(_nty), get_object_layer(), obj_crop);
 	}
-	var _item = try_collect_item(_tx, _ty);
+	var _item = try_collect_item(_ntx, _nty);
 	if (!_item && _target_crop != noone) {
 		_target_crop.interact();
 	}
@@ -78,7 +77,7 @@ function arrive() {
 		switch_plane();
 		queue_door = false;
 	}
-	try_collect_item(x, y);
+	try_collect_item(tx, ty);
 }
 
 function switch_plane() {
