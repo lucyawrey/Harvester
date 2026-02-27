@@ -3,6 +3,9 @@ growth_time_in_days = 3;
 viable_seasons = [SEASON.SPRING, SEASON.SUMMER];
 
 // State
+current_plane = get_plane_from_layer(layer);
+tx = tilemap_get_cell_x_at_pixel(get_event_tilemap(), x, y);
+ty = tilemap_get_cell_y_at_pixel(get_event_tilemap(), x, y);
 current_growth_stage = 1;
 
 function grow() {
@@ -21,4 +24,8 @@ function interact() {
 		instance_destroy();
 		instance_create_layer(x + 1, y + 1, layer, obj_item);
 	}
+}
+
+function get_event_tilemap() {
+	return layer_tilemap_get_id(EVENT_LAYERS[current_plane]);
 }
