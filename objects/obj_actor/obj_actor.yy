@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_item",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_actor",
+  "eventList":[],
   "managed":true,
-  "name":"obj_item",
+  "name":"obj_actor",
   "overriddenProperties":[],
   "parent":{
-    "name":"actors",
-    "path":"folders/objects/actors.yy",
+    "name":"objects",
+    "path":"folders/objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_actor",
-    "path":"objects/obj_actor/obj_actor.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_tomato_item",
-    "path":"sprites/spr_tomato_item/spr_tomato_item.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

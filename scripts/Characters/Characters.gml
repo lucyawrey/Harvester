@@ -1,7 +1,7 @@
 #macro AUTO_MOVE_DELAY 10
 
 enum FACING {
-    NONE = -1,
+	NONE = -1,
 	DOWN = 0,
 	LEFT = 1,
 	RIGHT = 2,
@@ -40,25 +40,25 @@ enum EVENT {
 }
 
 function pixel(_tiles) {
-    return _tiles * TILE_SIZE;
+	return _tiles * TILE_SIZE;
 }
 
 function point_facing(_x1, _y1, _x2, _y2) {
-    var _x = _x2 - _x1, _y = _y2 - _y1;
-    if (_x == 0 && _y == 0) {
-        return FACING.NONE;
-    }
-    if (abs(_x) > abs(_y)) {
-        if (_x > 0) {
-            return FACING.RIGHT;
-        } else {
-            return FACING.LEFT;
-        }
-    } else {
-        if (_y > 0) {
-            return FACING.DOWN;
-        } else {
-            return FACING.UP;
-        }
-    }
+	var _x = _x2 - _x1, _y = _y2 - _y1;
+	if (_x == 0 && _y == 0) {
+		return FACING.NONE;
+	}
+	if (abs(_x) > abs(_y)) {
+		if (_x > 0) {
+			return FACING.RIGHT;
+		} else {
+			return FACING.LEFT;
+		}
+	} else {
+		if (_y > 0) {
+			return FACING.DOWN;
+		} else {
+			return FACING.UP;
+		}
+	}
 }

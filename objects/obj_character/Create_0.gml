@@ -24,7 +24,7 @@ function move(_direction, _tiles) {
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
 	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
 
-	var _target_character = get_object(_ntx, _nty, obj_character);
+	var _target_character = get_actor(_ntx, _nty, obj_character);
 
 	if (_target_tile_event != EVENT.WALL && _target_character == noone) {
 		tx = _ntx;
@@ -54,9 +54,9 @@ function interact() {
 		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
 	}
 
-	var _target_crop = get_object(_ntx, _nty, obj_crop);
+	var _target_crop = get_actor(_ntx, _nty, obj_crop);
 	if (_target_tile_event == EVENT.TILLED && _target_crop == noone) {
-		instance_create_layer(pixel(_ntx), pixel(_nty), get_object_layer(), obj_crop);
+		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
 	}
 	var _item = try_collect_item(_ntx, _nty);
 	if (!_item && _target_crop != noone) {
@@ -82,7 +82,7 @@ function arrive() {
 
 function switch_plane() {
 	var _new_plane = current_plane == PLANE.INTERIOR ? PLANE.EXTERIOR : PLANE.INTERIOR;
-	layer = get_object_layer_id(_new_plane);
+	layer = get_actor_layer_id(_new_plane);
 	current_plane = _new_plane;
 	if (is_player) {
 		set_active_plane(_new_plane);
@@ -97,6 +97,6 @@ function get_2_tilemap() {
 	return layer_tilemap_get_id(LAYERS_2[current_plane]);
 }
 
-function get_object_layer() {
-	return layer_get_id(OBJECT_LAYERS[current_plane]);
+function get_actor_layer() {
+	return layer_get_id(ACTOR_LAYERS[current_plane]);
 }

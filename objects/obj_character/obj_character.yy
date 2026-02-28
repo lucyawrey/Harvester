@@ -9,10 +9,13 @@
   "name":"obj_character",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"actors",
+    "path":"folders/objects/actors.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_actor",
+    "path":"objects/obj_actor/obj_actor.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

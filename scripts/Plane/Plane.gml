@@ -3,8 +3,8 @@ enum PLANE {
 	EXTERIOR = 1,
 }
 
-#macro PLANES [["IObject", "I2", "I1"], ["EObject", "E2", "E1"]]
-#macro OBJECT_LAYERS ["IObject", "EObject"]
+#macro PLANES [["IActor", "I2", "I1"], ["EActor", "E2", "E1"]]
+#macro ACTOR_LAYERS ["IActor", "EActor"]
 #macro EVENT_LAYERS ["IEvent", "EEvent"]
 #macro LAYERS_2 ["I2", "E2"]
 #macro LIGHT_LAYERS ["Sun", "Moon"]
@@ -28,8 +28,8 @@ function get_plane_from_layer(_layer) {
 	}
 }
 
-function get_object_layer_id(_plane) {
-	return layer_get_id(OBJECT_LAYERS[_plane]);
+function get_actor_layer_id(_plane) {
+	return layer_get_id(ACTOR_LAYERS[_plane]);
 }
 
 function layer_setup() {

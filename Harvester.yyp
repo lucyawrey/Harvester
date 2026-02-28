@@ -58,6 +58,7 @@
     {"$GMFolder":"","%Name":"Verb Interaction","folderPath":"folders/extensions/input/Verb Interaction.yy","name":"Verb Interaction","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Virtual Buttons","folderPath":"folders/extensions/input/Virtual Buttons.yy","name":"Virtual Buttons","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"actors","folderPath":"folders/objects/actors.yy","name":"actors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rental_assets","folderPath":"folders/rental_assets.yy","name":"rental_assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ansimuz","folderPath":"folders/rental_assets/ansimuz.yy","name":"ansimuz","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sharm","folderPath":"folders/rental_assets/sharm.yy","name":"sharm","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -80,6 +81,7 @@
   "name":"Harvester",
   "resources":[
     {"id":{"name":"__InputUpdateController","path":"objects/__InputUpdateController/__InputUpdateController.yy",},},
+    {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},},
     {"id":{"name":"obj_character","path":"objects/obj_character/obj_character.yy",},},
     {"id":{"name":"obj_clock","path":"objects/obj_clock/obj_clock.yy",},},
     {"id":{"name":"obj_crop","path":"objects/obj_crop/obj_crop.yy",},},

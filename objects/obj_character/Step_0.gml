@@ -3,8 +3,8 @@ move_speed = InputCheck(VERB.CANCEL) ? base_move_speed * 2 : base_move_speed;
 move_delay = TILE_SIZE / move_speed;
 
 if (is_moving) {
-    var _nx = pixel(tx), _ny = pixel(ty);
-    
+	var _nx = pixel(tx), _ny = pixel(ty);
+
 	if (move_timer > move_delay / 2) {
 		image_index = target_image_index;
 	}
