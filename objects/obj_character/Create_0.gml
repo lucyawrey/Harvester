@@ -1,12 +1,12 @@
+event_inherited();
+
 // Config
+is_solid = true;
 is_player = false;
 base_move_speed = 1;
 image_index = SPRITE.DOWN;
 
 // State
-current_plane = get_plane_from_layer(layer);
-tx = tilemap_get_cell_x_at_pixel(get_event_tilemap(), x, y);
-ty = tilemap_get_cell_y_at_pixel(get_event_tilemap(), x, y);
 is_moving = false;
 facing_direction = FACING.DOWN;
 move_speed = base_move_speed;
@@ -24,9 +24,9 @@ function move(_direction, _tiles) {
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
 	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
 
-	var _target_character = get_actor(_ntx, _nty, obj_character);
+	var _target_actor = get_actor(_ntx, _nty);
 
-	if (_target_tile_event != EVENT.WALL && _target_character == noone) {
+	if (_target_tile_event != EVENT.WALL && (_target_actor == noone || !_target_actor.is_solid)) {
 		tx = _ntx;
 		ty = _nty;
 	}
@@ -54,13 +54,13 @@ function interact() {
 		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
 	}
 
-	var _target_crop = get_actor(_ntx, _nty, obj_crop);
-	if (_target_tile_event == EVENT.TILLED && _target_crop == noone) {
+	var _target_actor = get_actor(_ntx, _nty);
+	if (_target_tile_event == EVENT.TILLED && _target_actor == noone) {
 		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
 	}
 	var _item = try_collect_item(_ntx, _nty);
-	if (!_item && _target_crop != noone) {
-		_target_crop.interact();
+	if (!_item && _target_actor != noone && object_is_type(_target_actor, obj_crop)) {
+		_target_actor.interact();
 	}
 
 	if (is_player) {
@@ -87,16 +87,4 @@ function switch_plane() {
 	if (is_player) {
 		set_active_plane(_new_plane);
 	}
-}
-
-function get_event_tilemap() {
-	return layer_tilemap_get_id(EVENT_LAYERS[current_plane]);
-}
-
-function get_2_tilemap() {
-	return layer_tilemap_get_id(LAYERS_2[current_plane]);
-}
-
-function get_actor_layer() {
-	return layer_get_id(ACTOR_LAYERS[current_plane]);
 }

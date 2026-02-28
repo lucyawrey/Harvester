@@ -1,17 +1,18 @@
+event_inherited();
+
 // Config
 growth_time_in_days = 3;
 viable_seasons = [SEASON.SPRING, SEASON.SUMMER];
+is_solid_stage = 2;
 
 // State
-current_plane = get_plane_from_layer(layer);
-tx = tilemap_get_cell_x_at_pixel(get_event_tilemap(), x, y);
-ty = tilemap_get_cell_y_at_pixel(get_event_tilemap(), x, y);
 current_growth_stage = 1;
 
 function grow() {
 	if (current_growth_stage < growth_time_in_days) {
 		current_growth_stage++;
 	}
+    is_solid = current_growth_stage >= is_solid_stage;
 	set_visual();
 }
 

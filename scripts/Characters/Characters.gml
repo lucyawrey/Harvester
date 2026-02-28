@@ -62,3 +62,8 @@ function point_facing(_x1, _y1, _x2, _y2) {
 		}
 	}
 }
+
+function object_is_type(_instance, _object) {
+	return _instance.object_index == _object
+		|| object_is_ancestor(_instance.object_index, _object);
+}

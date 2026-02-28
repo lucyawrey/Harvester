@@ -6,6 +6,7 @@ enum PLANE {
 #macro PLANES [["IActor", "I2", "I1"], ["EActor", "E2", "E1"]]
 #macro ACTOR_LAYERS ["IActor", "EActor"]
 #macro EVENT_LAYERS ["IEvent", "EEvent"]
+#macro LAYERS_1 ["I1", "E1"]
 #macro LAYERS_2 ["I2", "E2"]
 #macro LIGHT_LAYERS ["Sun", "Moon"]
 
