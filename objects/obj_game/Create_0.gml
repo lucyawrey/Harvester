@@ -8,3 +8,4 @@ randomise();
 
 // Create objects
 instance_create_depth(0, 0, 30, obj_clock);
+instance_create_depth(0, 0, 30, obj_meter);

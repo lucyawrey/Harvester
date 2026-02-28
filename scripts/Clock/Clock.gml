@@ -39,6 +39,8 @@ function tick(_amount = 1) {
 		}
 	}
 	set_light_for_time(state.save.time);
+    
+    energy_spend();
 }
 
 function time_to_tick(_time) {

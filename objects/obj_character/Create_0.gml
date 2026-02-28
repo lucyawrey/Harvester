@@ -52,15 +52,24 @@ function interact() {
 	if (_target_tile_event == EVENT.SOIL) {
 		tilemap_set(get_event_tilemap(), EVENT.TILLED, _ntx, _nty);
 		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
+        if (is_player) {
+            energy_spend();
+        }
 	}
 
 	var _target_actor = get_actor(_ntx, _nty);
 	if (_target_tile_event == EVENT.TILLED && _target_actor == noone) {
 		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
+        if (is_player) {
+            energy_spend();
+        }
 	}
 	var _item = try_collect_item(_ntx, _nty);
 	if (!_item && _target_actor != noone && object_is_type(_target_actor, obj_crop)) {
 		_target_actor.interact();
+        if (is_player) {
+            energy_spend();
+        }
 	}
 
 	if (is_player) {
