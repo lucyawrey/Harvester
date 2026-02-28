@@ -53,14 +53,14 @@ function time_to_tick(_time) {
 	return _minutes div MINUTES_PER_TICK;
 }
 
-function tick_to_time(_ticks, _twenty_four_hour = false) {
+function tick_to_time(_ticks, _twenty_four_hour = true) {
 	var _total_minutes = _ticks * MINUTES_PER_TICK;
 	var _hours = _total_minutes div MINUTES_PER_HOUR;
 	var _minutes = _total_minutes % MINUTES_PER_HOUR;
 	var _prefix = _minutes < 10 ? "0" : "";
 	var _suffix = "";
 
-	if (_twenty_four_hour) {
+	if (!_twenty_four_hour) {
 		_suffix = _hours < 12 ? "AM" : "PM";
 		_hours = _hours % 12 == 0 ? 12 : _hours % 12;
 	}
