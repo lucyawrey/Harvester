@@ -23,10 +23,13 @@ function move(_direction, _tiles) {
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles;
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
 	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
-
+    // TODO only get actors on same plane
 	var _target_actor = get_actor(_ntx, _nty);
 
-	if (_target_tile_event != EVENT.WALL && (_target_actor == noone || !_target_actor.is_solid)) {
+	if (
+		_target_tile_event != EVENT.WALL
+		&& (_target_actor == noone || !_target_actor.is_solid)
+	) {
 		tx = _ntx;
 		ty = _nty;
 	}
@@ -41,6 +44,7 @@ function move(_direction, _tiles) {
 
 	if (is_player) {
 		tick();
+		energy_spend();
 	}
 }
 
@@ -48,32 +52,32 @@ function interact() {
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x");
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y");
 	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
+	var _target_actor = get_actor(_ntx, _nty);
 
-	if (_target_tile_event == EVENT.SOIL) {
+	if (_target_tile_event == EVENT.SOIL && _target_actor == noone) {
 		tilemap_set(get_event_tilemap(), EVENT.TILLED, _ntx, _nty);
 		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
-        if (is_player) {
-            energy_spend();
-        }
+		if (is_player) {
+			energy_spend();
+		}
 	}
 
-	var _target_actor = get_actor(_ntx, _nty);
 	if (_target_tile_event == EVENT.TILLED && _target_actor == noone) {
 		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
-        if (is_player) {
-            energy_spend();
-        }
+		if (is_player) {
+			energy_spend();
+		}
 	}
-	var _item = try_collect_item(_ntx, _nty);
-	if (!_item && _target_actor != noone && object_is_type(_target_actor, obj_crop)) {
-		_target_actor.interact();
-        if (is_player) {
-            energy_spend();
-        }
+	if (_target_actor != noone) {
+		_target_actor.on_interact();
+		if (is_player) {
+			energy_spend();
+		}
 	}
 
 	if (is_player) {
 		tick();
+		energy_spend();
 	}
 }
 
@@ -86,7 +90,11 @@ function arrive() {
 		switch_plane();
 		queue_door = false;
 	}
-	try_collect_item(tx, ty);
+
+	var _target_actor = get_actor(tx, ty, id);
+	if (_target_actor != noone) {
+		_target_actor.on_intersect();
+	}
 }
 
 function switch_plane() {

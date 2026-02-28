@@ -16,31 +16,38 @@ enum SEASON {
 #macro SEASONS ["Void", "Spring", "Summer", "Fall", "Winter"]
 
 function tick(_amount = 1) {
-	with (obj_npc) {
-		on_tick();
-	}
-
-	state.save.time += _amount;
-	if (state.save.time == TICKS_PER_DAY) {
-		state.save.time = 0;
-		state.save.day++;
-
-		with (obj_crop) {
-			grow();
+	repeat (_amount) {
+		state.save.time++;
+		with (obj_npc) {
+			on_tick();
 		}
+		if (state.save.time == TICKS_PER_DAY) {
+			state.save.time = 0;
+			state.save.day++;
 
-		if (state.save.day > DAYS_PER_SEASON) {
-			state.save.day = 1;
-			state.save.season++;
-			if (state.save.season > SEASONS_PER_YEAR) {
-				state.save.season = 1;
-				state.save.year++;
+			with (obj_crop) {
+				grow();
+			}
+
+			if (state.save.day > DAYS_PER_SEASON) {
+				state.save.day = 1;
+				state.save.season++;
+				if (state.save.season > SEASONS_PER_YEAR) {
+					state.save.season = 1;
+					state.save.year++;
+				}
 			}
 		}
+		set_light_for_time(state.save.time);
 	}
-	set_light_for_time(state.save.time);
-    
-    energy_spend();
+}
+
+function sleep() {
+	tick(time_to_tick("8:00"));
+	state.save.exhaustion = energy_clamp(
+		energy_clamp(state.save.exhaustion) - (MAX_ENERGY / 5)
+	);
+	state.save.energy = energy_clamp(MAX_ENERGY - state.save.exhaustion);
 }
 
 function time_to_tick(_time) {

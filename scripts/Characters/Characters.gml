@@ -39,8 +39,6 @@ enum EVENT {
 	TILLED = 5,
 }
 
-#macro MAX_ENERGY TICKS_PER_DAY
-
 function pixel(_tiles) {
 	return _tiles * TILE_SIZE;
 }
