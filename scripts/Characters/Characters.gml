@@ -27,7 +27,7 @@ enum SPRITE {
 #macro DEADZONE 0.5
 
 enum TILE {
-	TILLED = 41,
+	TILLED = 16,
 }
 
 enum EVENT {
