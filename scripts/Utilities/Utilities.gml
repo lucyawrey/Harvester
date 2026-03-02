@@ -5,7 +5,7 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 		if (tx == _tx && ty == _ty) {
 			if (
                 // TODO this does not work for "obj_bed"
-				obj_actor.current_plane != _plane
+				current_plane != _plane
 				|| (_ignore_obj_id != undefined && _ignore_obj_id == id)
 			) {
 				continue;
