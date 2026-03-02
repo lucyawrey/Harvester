@@ -3,10 +3,10 @@ enum PLANE {
 	EXTERIOR = 1,
 }
 
-#macro PLANES [["IActor", "I2", "I1"], ["EActor", "E2", "E1"]]
+#macro PLANES [["IActor", "Interior2", "Interior1"], ["EActor", "Exterior2", "Exterior1"]]
 #macro ACTOR_LAYERS ["IActor", "EActor"]
-#macro LAYERS_1 ["I1", "E1"]
-#macro LAYERS_2 ["I2", "E2"]
+#macro LAYERS_1 ["Interior1", "Exterior1"]
+#macro LAYERS_2 ["Interior2", "Exterior2"]
 #macro LIGHT_LAYERS ["Sun", "Moon"]
 
 function set_active_plane(_new_plane) {
