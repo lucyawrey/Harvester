@@ -1,0 +1,52 @@
+[
+    {
+        "id": 0,
+        "name": "void",
+        "is_solid": false,
+        "enter": "none",
+        "interact": "none"
+    },
+    {
+        "id": 16,
+        "name": "tilled"
+    },
+    {
+        "id": 17,
+        "name": "tilled_wet"
+    },
+    {
+        "id": 19,
+        "name": "wall",
+        "is_solid": true
+    },
+    {
+        "id": 20,
+        "name": "doormat",
+        "event": "door"
+    },
+    {
+        "id": 32,
+        "name": "roof1",
+        "is_solid": true
+    },
+    {
+        "id": 48,
+        "name": "roof2",
+        "is_solid": true
+    },
+    {
+        "id": 64,
+        "name": "outer_wall",
+        "is_solid": true
+    },
+    {
+        "id": 80,
+        "name": "brick",
+        "is_solid": true
+    },
+    {
+        "id": 81,
+        "name": "door",
+        "event": "door"
+    }
+]

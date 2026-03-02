@@ -8,6 +8,6 @@ function on_interact() {
 	collect();
 }
 
-function on_intersect() {
+function on_enter() {
 	collect();
 }

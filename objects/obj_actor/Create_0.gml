@@ -8,7 +8,7 @@ ty = tilemap_get_cell_y_at_pixel(get_event_tilemap(), x, y);
 
 function on_interact() {}
 
-function on_intersect() {}
+function on_enter() {}
 
 function get_actor_layer() {
 	return layer_get_id(ACTOR_LAYERS[current_plane]);

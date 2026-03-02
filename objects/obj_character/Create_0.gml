@@ -23,7 +23,7 @@ function move(_direction, _tiles) {
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles;
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
 	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
-    // TODO only get actors on same plane
+	// TODO only get actors on same plane
 	var _target_actor = get_actor(_ntx, _nty);
 
 	if (
@@ -93,7 +93,7 @@ function arrive() {
 
 	var _target_actor = get_actor(tx, ty, id);
 	if (_target_actor != noone) {
-		_target_actor.on_intersect();
+		_target_actor.on_enter();
 	}
 }
 
