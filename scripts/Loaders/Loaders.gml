@@ -1,13 +1,20 @@
 #macro TILES_PATH "*tiles.json"
+#macro TOTAL_TILES 256
 
 function load_tiles() {
 	var _tiles = load_json_files_to_array(TILES_PATH);
 	array_foreach(_tiles, function(_tile) {
-		if (struct_exists(_tile, "id") && struct_exists(_tile, "name")) {
+		if (struct_exists(_tile, "id")) {
+			if (_tile.id == 0) {
+				state.default_tile = _tile;
+			}
 			state.tiles[_tile.id] = _tile;
-			state.tiles_index[$ _tile.name] = _tile.id;
+			if (struct_exists(_tile, "name")) {
+				state.tiles_index[$ _tile.name] = _tile.id;
+			}
 		}
 	});
+	log(state.tiles);
 }
 
 function load_json_files_to_array(_mask) {
@@ -17,7 +24,7 @@ function load_json_files_to_array(_mask) {
 		var _file = _files[_i];
 		var _json = read_text_from_file_by_filename(_file);
 		var _data = json_parse(_json);
-		array_concat(_output, _data);
+		_output = array_concat(_output, _data);
 	}
 	return _output;
 }

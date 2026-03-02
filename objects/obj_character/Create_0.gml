@@ -19,21 +19,25 @@ queue_door = false;
 
 function move(_direction, _tiles) {
 	facing_direction = _direction;
-	var _current_tile_event = tilemap_get_at_pixel(get_event_tilemap(), x, y);
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles;
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;
-	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
+	var _current_tile_1 = tilemap_get_tile(get_tilemap_1(), tx, ty);
+	var _current_tile_2 = tilemap_get_tile(get_tilemap_2(), tx, ty);
+	var _target_tile_1 = tilemap_get_tile(get_tilemap_1(), _ntx, _nty);
+	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
+    
 	// TODO only get actors on same plane
 	var _target_actor = get_actor(_ntx, _nty);
 
 	if (
-		_target_tile_event != EVENT.WALL
+		!_target_tile_1.is_solid
+		&& !_target_tile_2.is_solid
 		&& (_target_actor == noone || !_target_actor.is_solid)
 	) {
 		tx = _ntx;
 		ty = _nty;
 	}
-	if (_target_tile_event == EVENT.DOOR) {
+	if (_target_tile_2.enter == "door") {
 		queue_door = true;
 	}
 	is_moving = true;
@@ -51,18 +55,20 @@ function move(_direction, _tiles) {
 function interact() {
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x");
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y");
-	var _target_tile_event = tilemap_get(get_event_tilemap(), _ntx, _nty);
+	var _target_tile_1 = tilemap_get_tile(get_tilemap_1(), _ntx, _nty);
+	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
+
+	// TODO only get actors on same plane
 	var _target_actor = get_actor(_ntx, _nty);
 
-	if (_target_tile_event == EVENT.SOIL && _target_actor == noone) {
-		tilemap_set(get_event_tilemap(), EVENT.TILLED, _ntx, _nty);
-		tilemap_set(get_2_tilemap(), TILE.TILLED, _ntx, _nty);
+	if (_target_tile_1.is_soil && _target_tile_2.name == "void" && _target_actor == noone) {
+		tilemap_set(get_tilemap_2(), tile_get_id("tilled"), _ntx, _nty);
 		if (is_player) {
 			energy_spend();
 		}
 	}
 
-	if (_target_tile_event == EVENT.TILLED && _target_actor == noone) {
+	if (_target_tile_2.name == "tilled" && _target_actor == noone) {
 		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
 		if (is_player) {
 			energy_spend();

@@ -26,19 +26,6 @@ enum SPRITE {
 #macro VECTORS [{x: 0, y: 1}, {x: -1, y: 0}, {x: 1, y: 0}, {x: 0, y: -1}]
 #macro DEADZONE 0.5
 
-enum TILE {
-	TILLED = 16,
-}
-
-enum EVENT {
-	VOID = 0,
-	GROUND = 1,
-	WALL = 2,
-	DOOR = 3,
-	SOIL = 4,
-	TILLED = 5,
-}
-
 function pixel(_tiles) {
 	return _tiles * TILE_SIZE;
 }

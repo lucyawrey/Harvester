@@ -5,7 +5,6 @@ enum PLANE {
 
 #macro PLANES [["IActor", "I2", "I1"], ["EActor", "E2", "E1"]]
 #macro ACTOR_LAYERS ["IActor", "EActor"]
-#macro EVENT_LAYERS ["IEvent", "EEvent"]
 #macro LAYERS_1 ["I1", "E1"]
 #macro LAYERS_2 ["I2", "E2"]
 #macro LIGHT_LAYERS ["Sun", "Moon"]
@@ -35,7 +34,6 @@ function get_actor_layer_id(_plane) {
 
 function layer_setup() {
 	for (var _i = 0; _i < 2; _i++) {
-		layer_set_visible(EVENT_LAYERS[_i], false);
 		layer_set_visible(LIGHT_LAYERS[_i], true);
 	}
 	layer_set_visible("Grid", false);

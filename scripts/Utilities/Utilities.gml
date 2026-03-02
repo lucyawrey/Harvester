@@ -12,12 +12,20 @@ function get_actor(_tx, _ty, _ignore_obj_id = undefined) {
 	return noone;
 }
 
-function struct_merge(_destination, _source) {
-	if (!is_struct(_destination) || !is_struct(_source)) {
-		return;
+function struct_get_merged(_structs, _name) {
+	for (var _i = array_length(_structs) - 1; _i >= 0; _i--) {
+		var _item = _structs[_i];
+		if (is_undefined(_item)) {
+			continue;
+		}
+		if (is_string(_item) || is_bool(_item) || is_real(_item)) {
+			return _item;
+		}
+		if (struct_exists(_item, _name)) {
+			return struct_get(_item, _name);
+		}
+		if (struct_exists(_item, _name + ":")) {
+			return struct_get(_item, _name + ":");
+		}
 	}
-	destination_ = _destination;
-	struct_foreach(_source, function(_name, _value) {
-		struct_set(destination_, _name, _value);
-	});
 }

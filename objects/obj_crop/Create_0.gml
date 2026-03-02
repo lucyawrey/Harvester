@@ -26,7 +26,3 @@ function on_interact() {
 		instance_create_layer(x + 1, y + 1, layer, obj_item);
 	}
 }
-
-function get_event_tilemap() {
-	return layer_tilemap_get_id(EVENT_LAYERS[current_plane]);
-}

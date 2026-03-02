@@ -3,8 +3,14 @@
         "id": 0,
         "name": "void",
         "is_solid": false,
+        "is_soil": false,
         "enter": "none",
         "interact": "none"
+    },
+    {
+        "id": 1,
+        "name": "grass",
+        "is_soil" : true
     },
     {
         "id": 16,
@@ -22,7 +28,7 @@
     {
         "id": 20,
         "name": "doormat",
-        "event": "door"
+        "enter": "door"
     },
     {
         "id": 32,
@@ -47,6 +53,6 @@
     {
         "id": 81,
         "name": "door",
-        "event": "door"
+        "enter": "door"
     }
 ]

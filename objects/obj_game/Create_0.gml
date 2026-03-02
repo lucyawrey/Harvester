@@ -6,7 +6,7 @@ layer_setup();
 set_light_for_time(state.save.time);
 randomise();
 
- // Load data
+// Load data
 load_tiles();
 
 // Create objects

@@ -22,6 +22,7 @@ state = {
 	/* Volatile state */
 	tiles: [],
 	tiles_index: {},
+	default_tile: {},
 };
 
 INITIAL_STATE = variable_clone(state);
