@@ -1,9 +1,13 @@
 #macro log show_debug_message
 
-function get_actor(_tx, _ty, _ignore_obj_id = undefined) {
+function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 	with (obj_actor) {
 		if (tx == _tx && ty == _ty) {
-			if (_ignore_obj_id != undefined && _ignore_obj_id == id) {
+			if (
+                // TODO this does not work for "obj_bed"
+				obj_actor.current_plane != _plane
+				|| (_ignore_obj_id != undefined && _ignore_obj_id == id)
+			) {
 				continue;
 			}
 			return id;

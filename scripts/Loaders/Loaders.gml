@@ -14,7 +14,6 @@ function load_tiles() {
 			}
 		}
 	});
-	log(state.tiles);
 }
 
 function load_json_files_to_array(_mask) {

@@ -1,9 +1,9 @@
 function tile_get(_id_name) {
-    // TODO move most of this logic to load_tiles
+	// TODO move most of this logic to load_tiles
 	if (is_string(_id_name)) {
 		_id_name = tile_get_id(_id_name);
 	}
-    var _structs = [state.default_tile];
+	var _structs = [state.default_tile];
 	if (_id_name != 0 && is_real(_id_name)) {
 		array_push(_structs, {id: _id_name, name: $"tile{_id_name}"});
 		if (_id_name < array_length(state.tiles) && state.tiles[_id_name] != 0) {
@@ -14,7 +14,7 @@ function tile_get(_id_name) {
 		id: struct_get_merged(_structs, "id"),
 		name: struct_get_merged(_structs, "name"),
 		is_solid: struct_get_merged(_structs, "is_solid"),
-        is_soil: struct_get_merged(_structs, "is_soil"),
+		is_soil: struct_get_merged(_structs, "is_soil"),
 		enter: struct_get_merged(_structs, "enter"),
 		interact: struct_get_merged(_structs, "interact"),
 	};

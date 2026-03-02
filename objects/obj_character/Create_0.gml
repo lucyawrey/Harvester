@@ -25,9 +25,7 @@ function move(_direction, _tiles) {
 	var _current_tile_2 = tilemap_get_tile(get_tilemap_2(), tx, ty);
 	var _target_tile_1 = tilemap_get_tile(get_tilemap_1(), _ntx, _nty);
 	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
-    
-	// TODO only get actors on same plane
-	var _target_actor = get_actor(_ntx, _nty);
+	var _target_actor = get_actor(_ntx, _nty, current_plane);
 
 	if (
 		!_target_tile_1.is_solid
@@ -57,9 +55,7 @@ function interact() {
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y");
 	var _target_tile_1 = tilemap_get_tile(get_tilemap_1(), _ntx, _nty);
 	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
-
-	// TODO only get actors on same plane
-	var _target_actor = get_actor(_ntx, _nty);
+	var _target_actor = get_actor(_ntx, _nty, current_plane);
 
 	if (_target_tile_1.is_soil && _target_tile_2.name == "void" && _target_actor == noone) {
 		tilemap_set(get_tilemap_2(), tile_get_id("tilled"), _ntx, _nty);
@@ -97,7 +93,7 @@ function arrive() {
 		queue_door = false;
 	}
 
-	var _target_actor = get_actor(tx, ty, id);
+	var _target_actor = get_actor(tx, ty, current_plane, id);
 	if (_target_actor != noone) {
 		_target_actor.on_enter();
 	}
