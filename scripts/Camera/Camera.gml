@@ -3,7 +3,7 @@
 #macro VIEW_TILE_HEIGHT 12
 #macro VIEW_WIDTH (VIEW_TILE_WIDTH * TILE_SIZE)
 #macro VIEW_HEIGHT (VIEW_TILE_HEIGHT * TILE_SIZE)
-#macro WINDOW_SCALE 3
+#macro WINDOW_SCALE 4
 
 #macro camera global.__camera
 

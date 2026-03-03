@@ -30,24 +30,22 @@ function pixel(_tiles) {
 	return _tiles * TILE_SIZE;
 }
 
-function point_facing(_x1, _y1, _x2, _y2) {
-	var _x = _x2 - _x1, _y = _y2 - _y1;
-	if (_x == 0 && _y == 0) {
-		return FACING.NONE;
-	}
-	if (abs(_x) > abs(_y)) {
-		if (_x > 0) {
+function angle_facing(_angle) {
+	var _direction = round(_angle / 90) % 4;
+	switch (_direction) {
+		case 0:
 			return FACING.RIGHT;
-		} else {
-			return FACING.LEFT;
-		}
-	} else {
-		if (_y > 0) {
-			return FACING.DOWN;
-		} else {
+		case 1:
 			return FACING.UP;
-		}
+		case 2:
+			return FACING.LEFT;
+		case 3:
+			return FACING.DOWN;
 	}
+}
+
+function point_facing(_x1, _y1, _x2, _y2) {
+	return angle_facing(point_direction(_x1, _y1, _x2, _y2));
 }
 
 function object_is_type(_instance, _object) {

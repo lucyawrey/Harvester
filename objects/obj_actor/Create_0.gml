@@ -3,6 +3,7 @@ is_solid = false;
 
 // State
 current_plane = get_plane_from_layer(layer);
+// TODO handle scaling and angle+facing
 tx = tilemap_get_cell_x_at_pixel(get_tilemap_1(), x, y);
 ty = tilemap_get_cell_y_at_pixel(get_tilemap_1(), x, y);
 
