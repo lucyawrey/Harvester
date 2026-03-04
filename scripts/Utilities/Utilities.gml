@@ -16,7 +16,9 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 }
 
 function create_actor(_tx, _ty, _plane, _object_id) {
-    var _new = instance_create_layer(pixel(_tx), pixel(_ty), "Actor", _object_id);
+    var _new = instance_create_layer(pixel(_tx), pixel(_ty) + TILE_SIZE, "Actor", _object_id);
+    _new.tx = _tx;
+    _new.ty = _ty;
     _new.current_plane = _plane;
 }
 
