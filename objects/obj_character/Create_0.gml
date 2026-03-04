@@ -68,7 +68,7 @@ function interact() {
 	}
 
 	if (_target_tile_2.name == "tilled" && _target_actor == noone) {
-		instance_create_layer(pixel(_ntx), pixel(_nty), get_actor_layer(), obj_crop);
+		create_actor(_ntx, _nty, current_plane, obj_crop);
 		if (is_player) {
 			energy_spend();
 		}
@@ -104,7 +104,6 @@ function arrive() {
 
 function switch_plane() {
 	var _new_plane = current_plane == PLANE.INTERIOR ? PLANE.EXTERIOR : PLANE.INTERIOR;
-	layer = get_actor_layer_id(_new_plane);
 	current_plane = _new_plane;
 	if (is_player) {
 		set_active_plane(_new_plane);

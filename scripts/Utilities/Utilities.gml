@@ -15,6 +15,11 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 	return noone;
 }
 
+function create_actor(_tx, _ty, _plane, _object_id) {
+    var _new = instance_create_layer(pixel(_tx), pixel(_ty), "Actor", _object_id);
+    _new.current_plane = _plane;
+}
+
 function struct_get_merged(_structs, _name) {
 	for (var _i = array_length(_structs) - 1; _i >= 0; _i--) {
 		var _item = _structs[_i];
