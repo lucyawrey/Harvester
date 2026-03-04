@@ -196,6 +196,7 @@
     {"id":{"name":"__InputVibrateClassPulse","path":"scripts/__InputVibrateClassPulse/__InputVibrateClassPulse.yy",},},
     {"id":{"name":"__InputVibrateConfig","path":"scripts/__InputVibrateConfig/__InputVibrateConfig.yy",},},
     {"id":{"name":"__InputVibrateSystem","path":"scripts/__InputVibrateSystem/__InputVibrateSystem.yy",},},
+    {"id":{"name":"AI","path":"scripts/AI/AI.yy",},},
     {"id":{"name":"Camera","path":"scripts/Camera/Camera.yy",},},
     {"id":{"name":"Characters","path":"scripts/Characters/Characters.yy",},},
     {"id":{"name":"Clock","path":"scripts/Clock/Clock.yy",},},
