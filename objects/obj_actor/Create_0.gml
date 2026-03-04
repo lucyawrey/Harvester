@@ -4,8 +4,8 @@ z_order = 0
 
 // State
 // TODO handle scaling and angle+facing
-tx = tilemap_get_cell_x_at_pixel(get_tilemap_1(), x, y);
-ty = tilemap_get_cell_y_at_pixel(get_tilemap_1(), x, y);
+tx = tilemap_get_cell_x_at_pixel(get_tilemap_1(), x, y - TILE_SIZE);
+ty = tilemap_get_cell_y_at_pixel(get_tilemap_1(), x, y - TILE_SIZE);
 
 function on_interact() {}
 

@@ -1,1 +1,1 @@
-depth = -y - z_order;
+depth = -2 * y - z_order;

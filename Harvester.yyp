@@ -11,6 +11,7 @@
   "defaultScriptType":1,
   "Folders":[
     {"$GMFolder":"","%Name":"assets","folderPath":"folders/assets.yy","name":"assets","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"actors","folderPath":"folders/assets/actors.yy","name":"actors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"extensions","folderPath":"folders/extensions.yy","name":"extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"input_plugins","folderPath":"folders/extensions/input_plugins.yy","name":"input_plugins","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Binding Icons","folderPath":"folders/extensions/input_plugins/Binding Icons.yy","name":"Binding Icons","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -422,7 +423,6 @@
     {"id":{"name":"spr_tomato_item","path":"sprites/spr_tomato_item/spr_tomato_item.yy",},},
     {"id":{"name":"spr_tomato_plant","path":"sprites/spr_tomato_plant/spr_tomato_plant.yy",},},
     {"id":{"name":"spr_ts_dungeon","path":"sprites/spr_ts_dungeon/spr_ts_dungeon.yy",},},
-    {"id":{"name":"spr_ts_events","path":"sprites/spr_ts_events/spr_ts_events.yy",},},
     {"id":{"name":"spr_ts_forest","path":"sprites/spr_ts_forest/spr_ts_forest.yy",},},
     {"id":{"name":"spr_ts_main","path":"sprites/spr_ts_main/spr_ts_main.yy",},},
     {"id":{"name":"spr_ts_objects","path":"sprites/spr_ts_objects/spr_ts_objects.yy",},},
