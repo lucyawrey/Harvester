@@ -6,9 +6,9 @@ var _max_energy_height = 56 - 2;
 
 draw_sprite_stretched(spr_box, 0, _dx, _dy, _wx, _hx);
 
-var _exhaustion_height = ceil(state.save.exhaustion / MAX_ENERGY * _max_energy_height);
+var _exhaustion_height = floor(state.save.exhaustion / MAX_ENERGY * _max_energy_height);
 var _offset1 = _max_energy_height - _exhaustion_height;
-if (_exhaustion_height >= 2) {
+if (_exhaustion_height > 2) {
 	draw_set_colour(c_red);
 	draw_rectangle(
 		_dx + 2,
@@ -19,9 +19,9 @@ if (_exhaustion_height >= 2) {
 	);
 }
 
-var _energy_height = ceil(state.save.energy / MAX_ENERGY * _max_energy_height);
+var _energy_height = floor(state.save.energy / MAX_ENERGY * _max_energy_height);
 var _offset2 = _max_energy_height - _energy_height;
-if (_energy_height >= 2) {
+if (_energy_height > 1) {
 	draw_set_colour(c_aqua);
 	draw_rectangle(
 		_dx + 2,
