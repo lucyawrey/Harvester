@@ -10,7 +10,7 @@
     {
         "id": 1,
         "name": "grass",
-        "is_soil" : true
+        "is_soil": true
     },
     {
         "id": 16,
@@ -32,27 +32,67 @@
     },
     {
         "id": 32,
-        "name": "roof1",
+        "is_solid": true
+    },
+    {
+        "id": 33,
+        "is_solid": true
+    },
+    {
+        "id": 34,
+        "is_solid": true
+    },
+    {
+        "id": 35,
         "is_solid": true
     },
     {
         "id": 48,
-        "name": "roof2",
+        "is_solid": true
+    },
+    {
+        "id": 49,
+        "is_solid": true
+    },
+    {
+        "id": 50,
+        "is_solid": true
+    },
+    {
+        "id": 51,
         "is_solid": true
     },
     {
         "id": 64,
-        "name": "outer_wall",
+        "is_solid": true
+    },
+    {
+        "id": 65,
+        "is_solid": true
+    },
+    {
+        "id": 66,
+        "is_solid": true
+    },
+    {
+        "id": 67,
         "is_solid": true
     },
     {
         "id": 80,
-        "name": "brick",
         "is_solid": true
     },
     {
         "id": 81,
+        "is_solid": true
+    },
+    {
+        "id": 82,
         "name": "door",
         "enter": "door"
+    },
+    {
+        "id": 83,
+        "is_solid": true
     }
 ]
