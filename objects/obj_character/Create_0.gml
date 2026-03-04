@@ -2,6 +2,7 @@ event_inherited();
 
 // Config
 is_solid = true;
+z_order = 1;
 is_player = false;
 base_move_speed = 1;
 image_index = SPRITE.DOWN;

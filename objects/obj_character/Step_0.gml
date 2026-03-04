@@ -1,3 +1,5 @@
+event_inherited();
+
 // Sprint check
 move_speed = InputCheck(VERB.CANCEL) ? base_move_speed * 2 : base_move_speed;
 move_delay = TILE_SIZE / move_speed;
