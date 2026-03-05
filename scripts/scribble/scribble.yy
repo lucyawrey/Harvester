@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scribble",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scribble",
+  "parent":{
+    "name":"scribble",
+    "path":"folders/extensions/scribble.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
