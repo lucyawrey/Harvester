@@ -16,7 +16,7 @@ state = {
 		/* Player values */
 		energy: MAX_ENERGY,
 		exhaustion: 0,
-        active_plane: PLANE.EXTERIOR,
+		active_plane: PLANE.EXTERIOR,
 	},
 	/* game_data/save_shared.json */
 	save_shared: {active_save_slot: 0},

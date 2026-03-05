@@ -19,9 +19,9 @@ queue_interact = false;
 queue_door = false;
 
 function move(_direction, _tiles) {
-    if (_tiles == 0) {
-        return;
-    }
+	if (_tiles == 0) {
+		return;
+	}
 	facing_direction = _direction;
 	var _ntx = tx + struct_get(VECTORS[facing_direction], "x") * _tiles;
 	var _nty = ty + struct_get(VECTORS[facing_direction], "y") * _tiles;

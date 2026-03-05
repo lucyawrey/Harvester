@@ -1,6 +1,6 @@
 // Config
 is_solid = false;
-z_order = 0
+z_order = 0;
 
 // State
 // TODO handle scaling and angle+facing

@@ -7,7 +7,7 @@ enum PLANE {
 #macro SHOW_LAYERS ["Sun", "Moon", "Void", "Actor"]
 
 function set_active_plane(_new_plane) {
-    state.save.active_plane = _new_plane;
+	state.save.active_plane = _new_plane;
 	for (var _i = 0; _i < array_length(PLANES); _i++) {
 		for (var _j = 0; _j < array_length(PLANES[_i]); _j++) {
 			layer_set_visible(PLANES[_i][_j], (_i == _new_plane));
