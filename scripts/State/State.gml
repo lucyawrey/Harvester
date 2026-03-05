@@ -13,13 +13,17 @@ state = {
 		season: 1,
 		year: 1,
 		time: time_to_tick("6:00"),
+		/* Player values */
+		energy: MAX_ENERGY,
+		exhaustion: 0,
+        active_plane: PLANE.EXTERIOR,
 	},
 	/* game_data/save_shared.json */
 	save_shared: {active_save_slot: 0},
-	/* Non-saved global state */
-	player_active_plane: PLANE.INTERIOR,
-	characters: {},
-	characters_cache: {},
+	/* Volatile state */
+	tiles: [],
+	tiles_index: {},
+	default_tile: {},
 };
 
 INITIAL_STATE = variable_clone(state);

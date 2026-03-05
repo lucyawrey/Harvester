@@ -1,7 +1,6 @@
 // Feather disable all
 
 function __InputGetGamepadOutput(_device) {
-	//TODO - Is it faster to do this all in one if-statement?
 	if (INPUT_BAN_GAMEPADS) {
 		return undefined;
 	}

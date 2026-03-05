@@ -10,7 +10,6 @@ function __InputGamepadIdentifySwitchType(
 	_logWarnings = true
 ) {
 	if (_description == "Joy-Con") {
-		//TODO - GameMaker runtimes in 2024 are reporting single Joy-Cons without the left/right identifier
 		//       This is known to affect runtimes:
 		//       - v2022.0.2.49
 		//       - v2024.8.1.218

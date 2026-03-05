@@ -1,0 +1,98 @@
+[
+    {
+        "id": 0,
+        "name": "void",
+        "is_solid": false,
+        "is_soil": false,
+        "enter": "none",
+        "interact": "none"
+    },
+    {
+        "id": 1,
+        "name": "grass",
+        "is_soil": true
+    },
+    {
+        "id": 16,
+        "name": "tilled"
+    },
+    {
+        "id": 17,
+        "name": "tilled_wet"
+    },
+    {
+        "id": 19,
+        "name": "wall",
+        "is_solid": true
+    },
+    {
+        "id": 20,
+        "name": "doormat",
+        "enter": "door"
+    },
+    {
+        "id": 32,
+        "is_solid": true
+    },
+    {
+        "id": 33,
+        "is_solid": true
+    },
+    {
+        "id": 34,
+        "is_solid": true
+    },
+    {
+        "id": 35,
+        "is_solid": true
+    },
+    {
+        "id": 48,
+        "is_solid": true
+    },
+    {
+        "id": 49,
+        "is_solid": true
+    },
+    {
+        "id": 50,
+        "is_solid": true
+    },
+    {
+        "id": 51,
+        "is_solid": true
+    },
+    {
+        "id": 64,
+        "is_solid": true
+    },
+    {
+        "id": 65,
+        "is_solid": true
+    },
+    {
+        "id": 66,
+        "is_solid": true
+    },
+    {
+        "id": 67,
+        "is_solid": true
+    },
+    {
+        "id": 80,
+        "is_solid": true
+    },
+    {
+        "id": 81,
+        "is_solid": true
+    },
+    {
+        "id": 82,
+        "name": "door",
+        "enter": "door"
+    },
+    {
+        "id": 83,
+        "is_solid": true
+    }
+]

@@ -1,40 +1,27 @@
-if (InputCheck(VERB.DOWN) && auto_move_timer == 0) {
-	move(FACING.DOWN, 1);
-	image_index = anim_flag ? SPRITE.DOWN_WALK_2 : SPRITE.DOWN_WALK_1;
-	next_image_index = SPRITE.DOWN;
+event_inherited();
 
-	set_animation_alarm();
-} else if (InputCheck(VERB.LEFT) && auto_move_timer == 0) {
-	move(FACING.LEFT, 1);
-	image_index = anim_flag ? SPRITE.LEFT_WALK_2 : SPRITE.LEFT_WALK_1;
-	next_image_index = SPRITE.LEFT;
-	set_animation_alarm();
-} else if (InputCheck(VERB.RIGHT) && auto_move_timer == 0) {
-	move(FACING.RIGHT, 1);
-	image_index = anim_flag ? SPRITE.RIGHT_WALK_2 : SPRITE.RIGHT_WALK_1;
-	next_image_index = SPRITE.RIGHT;
-	set_animation_alarm();
-} else if (InputCheck(VERB.UP) && auto_move_timer == 0) {
-	move(FACING.UP, 1);
-	image_index = anim_flag ? SPRITE.UP_WALK_2 : SPRITE.UP_WALK_1;
-	next_image_index = SPRITE.UP;
-	set_animation_alarm();
-}
-
-if (InputCheckMany([VERB.DOWN, VERB.LEFT, VERB.RIGHT, VERB.UP])) {
-	if (auto_move_timer >= AUTO_MOVE_DELAY) {
-		auto_move_timer = 0;
-	} else {
-		auto_move_timer++;
+if (!is_moving) {
+	if (InputY(CLUSTER.NAVIGATION) > DEADZONE) {
+		move(FACING.DOWN, 1);
+	} else if (InputX(CLUSTER.NAVIGATION) < -DEADZONE) {
+		move(FACING.LEFT, 1);
+	} else if (InputX(CLUSTER.NAVIGATION) > DEADZONE) {
+		move(FACING.RIGHT, 1);
+	} else if (InputY(CLUSTER.NAVIGATION) < -DEADZONE) {
+		move(FACING.UP, 1);
 	}
-} else {
-	auto_move_timer = 0;
+	if (InputPressed(VERB.ACCEPT)) {
+		interact();
+	}
+} else if (move_timer > move_delay / 2) {
+	if (InputCheck(VERB.ACCEPT)) {
+		queue_interact = true;
+	}
 }
 
-if (InputPressed(VERB.ACCEPT)) {
-	interact();
-}
-
-if (InputCheck(VERB.CANCEL)) {
-	tick();
-}
+// Camera
+camera_set_view_pos(
+	camera,
+	x - (VIEW_WIDTH - TILE_SIZE) / 2,
+	y - (VIEW_HEIGHT - TILE_SIZE) / 2
+);
