@@ -9,5 +9,6 @@ randomise();
 load_tiles();
 
 // Create objects
-instance_create_depth(0, 0, 30, obj_clock);
-instance_create_depth(0, 0, 30, obj_meter);
+instance_create_depth(0, 0, -100, obj_clock);
+instance_create_depth(0, 0, -100, obj_meter);
+instance_create_depth(0, 0, -100, obj_dialogue);

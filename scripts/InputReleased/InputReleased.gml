@@ -2,7 +2,7 @@
 
 /// Returns whether a verb has been newly deactivated in the most recent update loop.
 ///
-/// @param {Enum.INPUT_VERB,Real} verb
+/// @param {Enum.VERB,Real} verb
 /// @param {Real} [playerIndex=0]
 
 function InputReleased(_verb, _playerIndex = 0) {

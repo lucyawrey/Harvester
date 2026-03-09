@@ -4,7 +4,7 @@
 /// then a copy of the metadata is stored; otherwise, the metadata is stored by reference if the
 /// metadata is a struct or array.
 ///
-/// @param {Enum.INPUT_VERB,Real} verb
+/// @param {Enum.VERB,Real} verb
 /// @param {Real} [playerIndex=0]
 /// @param {Bool} [makeCopy=false]
 

@@ -54,7 +54,7 @@ function __InputVerbGroupSystem() {
 
 						var _verbIndex = 0;
 						repeat (array_length(_verbGroupLookupArray)) {
-							if (INPUT_VERB_GROUP_INACTIVE_ON_ANY) {
+							if (VERB_GROUP_INACTIVE_ON_ANY) {
 								//Compare the verb group with the inactive bitmask. A verb is inactive if *any* of its verb groups
 								//are inactive
 								if (_verbGroupLookupArray[_verbIndex] & _inactiveBitmask) {

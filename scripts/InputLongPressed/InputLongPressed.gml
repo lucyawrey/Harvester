@@ -3,7 +3,7 @@
 /// Returns if a verb is newly considered a "long hold" based on the hold duration, measured in
 /// frames.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [duration]
 

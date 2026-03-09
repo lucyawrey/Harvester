@@ -3,7 +3,7 @@
 /// Returns if a verb has been released but previously was held for longer than the specified
 /// duration, measured in frames.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [duration]
 

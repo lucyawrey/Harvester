@@ -15,7 +15,7 @@
 ///
 /// Bindings can also be specified as an array of bindings e.g. `[vk_up, "W"]`.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {String} exportName
 /// @param {Any} defaultKbmBinding
 /// @param {Any} defaultGamepadBinding

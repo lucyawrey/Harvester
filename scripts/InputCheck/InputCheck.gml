@@ -4,7 +4,7 @@
 /// been moved etc.  This is a boolean `true` or `false` state; to return an analogue value please
 /// use `InputValue()`.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 
 function InputCheck(_verbIndex, _playerIndex = 0) {

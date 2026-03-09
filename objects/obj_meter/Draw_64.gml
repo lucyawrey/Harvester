@@ -1,5 +1,5 @@
-var _dx = VIEW_WIDTH - 15;
-var _dy = VIEW_HEIGHT - 59;
+var _dx = VIEW_WIDTH - 14;
+var _dy = VIEW_HEIGHT - 58;
 var _wx = 12;
 var _hx = 56;
 var _max_energy_height = 56 - 2;

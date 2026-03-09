@@ -10,11 +10,11 @@ if (!is_moving) {
 	} else if (InputY(CLUSTER.NAVIGATION) < -DEADZONE) {
 		move(FACING.UP, 1);
 	}
-	if (InputPressed(VERB.ACCEPT)) {
+	if (InputPressed(VERB.ACCEPT) && !obj_dialogue.visible) {
 		interact();
 	}
 } else if (move_timer > move_delay / 2) {
-	if (InputCheck(VERB.ACCEPT)) {
+	if (InputCheck(VERB.ACCEPT) && !obj_dialogue.visible) {
 		queue_interact = true;
 	}
 }

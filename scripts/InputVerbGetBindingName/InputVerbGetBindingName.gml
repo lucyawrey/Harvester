@@ -6,7 +6,7 @@
 /// N.B. This function is provided for basic binding naming and is suitable for debugging or
 ///      alpha-quality games. Please use the "Binding Icons" plug-in for a higher quality system.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [missingBindingName="???"]

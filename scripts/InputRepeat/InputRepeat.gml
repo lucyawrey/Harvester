@@ -4,7 +4,7 @@
 /// through longs menu when using digital input. The `delay` and `predelay` parameters are measured
 /// in frames.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [delay]
 /// @param {Real} [predelay]

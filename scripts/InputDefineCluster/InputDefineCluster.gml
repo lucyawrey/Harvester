@@ -14,10 +14,10 @@
 /// `true` will allow diagonal directions.
 ///
 /// @param {Enum.INPUT_CLUSTER,Real} clusterIndex
-/// @param {Enum.INPUT_VERB,Real} verbUp
-/// @param {Enum.INPUT_VERB,Real} verbRight
-/// @param {Enum.INPUT_VERB,Real} verbDown
-/// @param {Enum.INPUT_VERB,Real} verbLeft
+/// @param {Enum.VERB,Real} verbUp
+/// @param {Enum.VERB,Real} verbRight
+/// @param {Enum.VERB,Real} verbDown
+/// @param {Enum.VERB,Real} verbLeft
 /// @param {Real} [axisBiasFactor=0]
 /// @param {Real} [axisBiasDiagonals=false]
 /// @param {Any} [metadata=struct]

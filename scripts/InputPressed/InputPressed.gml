@@ -2,7 +2,7 @@
 
 /// Returns whether a verb has been newly actived in the most recent update loop.
 ///
-/// @param {Enum.INPUT_VERB,Real} verb
+/// @param {Enum.VERB,Real} verb
 /// @param {Real} [playerIndex=0]
 
 function InputPressed(_verb, _playerIndex = 0) {

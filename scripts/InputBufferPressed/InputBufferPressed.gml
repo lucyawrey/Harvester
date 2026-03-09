@@ -3,7 +3,7 @@
 /// Returns if a verb has been pressed during the specified duration, measured in
 /// frames.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} duration
 /// @param {Real} [playerIndex=0]
 

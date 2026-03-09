@@ -23,7 +23,7 @@ function InputVerbStateWrite(_buffer, _playerIndex = 0) {
 	var _frame = _system.__frame;
 	var _verbCount = InputVerbCount();
 
-	buffer_write(_buffer, buffer_string, __INPUT_VERB_STATE_HEADER);
+	buffer_write(_buffer, buffer_string, __VERB_STATE_HEADER);
 	buffer_write(_buffer, buffer_u16, _verbCount);
 
 	var _verbStateArray = _playerArray[_playerIndex].__verbStateArray;
@@ -39,5 +39,5 @@ function InputVerbStateWrite(_buffer, _playerIndex = 0) {
 		++_i;
 	}
 
-	buffer_write(_buffer, buffer_string, __INPUT_VERB_STATE_FOOTER);
+	buffer_write(_buffer, buffer_string, __VERB_STATE_FOOTER);
 }

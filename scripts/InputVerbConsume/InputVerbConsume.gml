@@ -4,7 +4,7 @@
 /// the verb is retriggered (e.g. by released a keyboard key and pressed it again). This helpful
 /// when navigating menus to prevent multiple inputs.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 
 function InputVerbConsume(_verbIndex, _playerIndex = 0) {

@@ -2,7 +2,7 @@
 
 /// Must be called from within a INPUT_PLUG_IN_CALLBACK.COLLECT_PLAYER callback.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Any} value
 /// @param {Any} [rawValue=value]
 /// @param {Real} [playerIndex=0]

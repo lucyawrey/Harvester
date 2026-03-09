@@ -1,0 +1,28 @@
+{
+    "Base": {
+        "name": "Base Character",
+        "name_color": "#999999",
+        "text_color": "#ffffff",
+        "text_speed": 1,
+        "prefix": "",
+        "suffix": "",
+        "sound": "click",
+        "sound_pitch": 1,
+        "sound_spacing": 4,
+        "background": "box",
+        "background_alt": "box_alt",
+        "fullscreen": false,
+        "font": "vcr"
+    },
+    "Narrator": {
+        "name": ""
+    },
+    "Rosalie": {
+        "name": "Rosalie",
+        "name_color": "#FF1D8D"
+    },
+    "Slow": {
+        "text_speed": 0.05,
+        "sound_spacing": 1
+    }
+}

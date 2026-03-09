@@ -155,8 +155,7 @@ function __ChatterboxVMInner(_instruction) {
 												)
 											) / 100;
 										break;
-									}
-									 catch (_error) {} //Failed to parse metadata
+									} catch (_error) {} //Failed to parse metadata
 								}
 
 								++_i;

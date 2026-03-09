@@ -3,9 +3,9 @@
 /// Swaps over two bindings. Useful to resolve binding conflicts.
 ///
 /// @param {Bool} forGamepad
-/// @param {Enum.INPUT_VERB,Real} verbA
+/// @param {Enum.VERB,Real} verbA
 /// @param {Real} alternateA
-/// @param {Enum.INPUT_VERB,Real} verbB
+/// @param {Enum.VERB,Real} verbB
 /// @param {Real} alternateB
 /// @param {Real} [playerIndex=0]
 

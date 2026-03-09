@@ -2,7 +2,7 @@
 
 /// Resets the metadata for a player's verb to the value set by `InputDefineVerb()`.
 ///
-/// @param {Enum.INPUT_VERB,Real} verb
+/// @param {Enum.VERB,Real} verb
 /// @param {Real} [playerIndex=0]
 
 function InputVerbResetMetadata(_verb, _playerIndex = 0) {

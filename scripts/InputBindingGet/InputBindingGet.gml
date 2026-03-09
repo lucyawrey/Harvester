@@ -5,7 +5,7 @@
 /// N.B. For left and up bindings on thumbsticks, the returned value will be negative.
 ///
 /// @param {Bool} forGamepad
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]
 

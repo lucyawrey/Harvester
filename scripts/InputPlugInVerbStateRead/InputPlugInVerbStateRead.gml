@@ -20,10 +20,10 @@ function InputPlugInVerbStateRead(_buffer, _playerIndex = 0) {
 	var _frame = _system.__frame;
 
 	var _header = buffer_read(_buffer, buffer_string);
-	if (_header != __INPUT_VERB_STATE_HEADER) {
+	if (_header != __VERB_STATE_HEADER) {
 		__InputError(
 			"Header mismatch (expecting \"",
-			__INPUT_VERB_STATE_HEADER,
+			__VERB_STATE_HEADER,
 			"\", got \"",
 			_header,
 			"\""
@@ -57,10 +57,10 @@ function InputPlugInVerbStateRead(_buffer, _playerIndex = 0) {
 	}
 
 	var _footer = buffer_read(_buffer, buffer_string);
-	if (_footer != __INPUT_VERB_STATE_FOOTER) {
+	if (_footer != __VERB_STATE_FOOTER) {
 		__InputError(
 			"Footer mismatch (expecting \"",
-			__INPUT_VERB_STATE_FOOTER,
+			__VERB_STATE_FOOTER,
 			"\", got \"",
 			_footer,
 			"\""

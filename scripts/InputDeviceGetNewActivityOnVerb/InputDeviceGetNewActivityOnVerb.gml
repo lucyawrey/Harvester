@@ -3,7 +3,7 @@
 /// Returns the first available (i.e. unassigned) device that has activity on a verb (as though a
 /// player had been assigned the device).
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @parma {Real} [playerIndex=0]
 
 function InputDeviceGetNewActivityOnVerb(_verbIndex, _playerIndex = 0) {

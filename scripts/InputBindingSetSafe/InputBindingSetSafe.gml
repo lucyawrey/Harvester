@@ -10,7 +10,7 @@
 /// these cases, you’ll need to handle conflict resolution yourself.
 ///
 /// @param {Bool} forGamepad
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Any} binding
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]

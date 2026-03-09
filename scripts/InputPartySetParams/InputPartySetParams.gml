@@ -27,11 +27,11 @@
 /// is useful if you'd like to make a custom method for a player to leave a party. Setting
 /// `leaveVerb` to `undefined` also disables aborting the party.
 ///
-/// @param {Enum.INPUT_VERB,Real} joinVerb
+/// @param {Enum.VERB,Real} joinVerb
 /// @param {Real} minPlayers
 /// @param {Real} maxPlayers
 /// @param {Bool} fillEmptyPlayers
-/// @param {Enum.INPUT_VERB,Real,Undefined} [leaveVerb]
+/// @param {Enum.VERB,Real,Undefined} [leaveVerb]
 /// @param {Method,Undefined} [abortCallback]
 /// @param {Bool} hotswapOnAbort
 

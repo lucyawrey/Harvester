@@ -4,7 +4,7 @@
 /// `0` on the first frame that the verb was pressed. This function will continue to return values
 /// even when the verb is not active.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 
 function InputDuration(_verbIndex, _playerIndex = 0) {

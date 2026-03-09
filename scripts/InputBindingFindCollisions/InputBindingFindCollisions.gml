@@ -9,7 +9,7 @@
 ///
 /// @param {Bool} forGamepad
 /// @param {Any} binding
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [alternate=0]
 

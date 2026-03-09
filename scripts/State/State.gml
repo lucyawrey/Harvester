@@ -24,6 +24,9 @@ state = {
 	tiles: [],
 	tiles_index: {},
 	default_tile: {},
+	characters: {},
+	characters_cache: {},
+	typist_sound_clock: 0,
 };
 
 INITIAL_STATE = variable_clone(state);

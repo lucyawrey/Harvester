@@ -5,8 +5,8 @@
 /// loop. If `mostRecent` is set to `true` then the most recently pressed verb is preferenced,
 /// otherwise `0` is returned if both verbs were pressed at the same time.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbNegative
-/// @param {Enum.INPUT_VERB,Real} verbPositive
+/// @param {Enum.VERB,Real} verbNegative
+/// @param {Enum.VERB,Real} verbPositive
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [mostRecent]
 

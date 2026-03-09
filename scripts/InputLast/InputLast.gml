@@ -5,7 +5,7 @@
 /// array), all defined verbs will be checked instead. If no verb in the array has ever been
 /// active, this function returns `undefined`.
 ///
-/// @param {Enum.INPUT_VERB,Real,Array} [verbIndexArray=all]
+/// @param {Enum.VERB,Real,Array} [verbIndexArray=all]
 /// @param {Real} [playerIndex=0]
 
 function InputLast(_verbIndexArray = -1, _playerIndex = 0) {

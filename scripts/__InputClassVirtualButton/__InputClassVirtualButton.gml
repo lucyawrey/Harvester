@@ -206,7 +206,7 @@ function __InputClassVirtualButton() constructor {
 		return _struct;
 	};
 
-	/// @param {Enum.INPUT_VERB,Real} verb
+	/// @param {Enum.VERB,Real} verb
 	static Button = function(_verb) {
 		if (__destroyed) {
 			return self;

@@ -5,8 +5,8 @@
 /// active, this function will return `0`. The `delay` and `predelay` parameters are measured in
 /// frames.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbNegative
-/// @param {Enum.INPUT_VERB,Real} verbPositive
+/// @param {Enum.VERB,Real} verbNegative
+/// @param {Enum.VERB,Real} verbPositive
 /// @param {Real} [playerIndex=0]
 /// @param {Real} [delay]
 /// @param {Real} [predelay]

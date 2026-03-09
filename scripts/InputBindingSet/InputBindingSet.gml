@@ -9,7 +9,7 @@
 ///      value of that binding e.g. `-gp_axislv` is an upwards push on the left thumbstick.
 ///
 /// @param {Bool} forGamepad
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Any} binding
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]

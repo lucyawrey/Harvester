@@ -3,7 +3,7 @@
 /// Returns the verb value if the targetted device was assigned to a player.
 ///
 /// @param {Real}  device
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [playerIndex=0]
 
 function InputDeviceCheckViaPlayer(_device, _verbIndex, _playerIndex = 0) {

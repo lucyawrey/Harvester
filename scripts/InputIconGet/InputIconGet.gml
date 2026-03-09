@@ -4,7 +4,7 @@
 /// The icon data that is returned will correlate with the player's current device and gamepad
 /// type.
 ///
-/// @param {Enum.INPUT_VERB,Real} verbIndex
+/// @param {Enum.VERB,Real} verbIndex
 /// @param {Real} [alternate=0]
 /// @param {Real} [playerIndex=0]
 

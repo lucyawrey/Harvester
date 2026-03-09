@@ -120,7 +120,7 @@
   "name":"fnt_vcr",
   "parent":{
     "name":"fonts",
-    "path":"folders/fonts.yy",
+    "path":"folders/assets/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
