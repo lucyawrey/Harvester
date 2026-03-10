@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"assets","folderPath":"folders/assets.yy","name":"assets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"actors","folderPath":"folders/assets/actors.yy","name":"actors","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"fonts","folderPath":"folders/assets/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"extensions","folderPath":"folders/extensions.yy","name":"extensions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"chatterbox","folderPath":"folders/extensions/chatterbox.yy","name":"chatterbox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"(System) (Don't look in here)","folderPath":"folders/extensions/chatterbox/(System) (Don't look in here).yy","name":"(System) (Don't look in here)","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -87,7 +88,6 @@
     {"$GMFolder":"","%Name":"Miscellaneous","folderPath":"folders/extensions/scribble/Miscellaneous.yy","name":"Miscellaneous","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Quick Functions","folderPath":"folders/extensions/scribble/Quick Functions.yy","name":"Quick Functions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Superfonts","folderPath":"folders/extensions/scribble/Superfonts.yy","name":"Superfonts","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"fonts","folderPath":"folders/assets/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"actors","folderPath":"folders/objects/actors.yy","name":"actors","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rental_assets","folderPath":"folders/rental_assets.yy","name":"rental_assets","resourceType":"GMFolder","resourceVersion":"2.0",},

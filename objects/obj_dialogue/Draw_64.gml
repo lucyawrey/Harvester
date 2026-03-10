@@ -19,7 +19,7 @@ function draw_background(_margin_x, _margin_y, _view_height_percent) {
 	var _x = _margin_x;
 	var _y = _margin_y;
 	var _w = VIEW_WIDTH - _margin_x * 2;
-	var _h = (VIEW_HEIGHT * _view_height_percent) - (2 * _margin_y);
+	var _h = ceil(VIEW_HEIGHT * _view_height_percent) - (2 * _margin_y);
 
 	draw_background_border(_x, _y, _w, _h);
 	draw_background_image(_x, _y, _w, _h, 6);
@@ -71,7 +71,7 @@ function draw_background_image(
 function draw_textbox(_margin_x, _margin_y, _view_height_percent) {
 	var _x = _margin_x;
 	var _w = VIEW_WIDTH - _margin_x * 2;
-	var _h = (VIEW_HEIGHT * _view_height_percent) - _margin_y;
+	var _h = ceil(VIEW_HEIGHT * _view_height_percent) - _margin_y;
 	var _y = VIEW_HEIGHT - _h - _margin_y;
 
 	draw_textbox_background(_x, _y, _w, _h);
@@ -207,12 +207,12 @@ function draw_text_advance_icon() {
 	}
 
 	var _offset = get_offset_for_rotation(spr_square, advance_icon_rotation, 0.5);
-	var _x_pos = VIEW_WIDTH - 100 - _offset.x;
-	var _y_pos = VIEW_HEIGHT - 60 - _offset.y;
-
+	var _x_pos = VIEW_WIDTH - 26 - _offset.x;
+	var _y_pos = VIEW_HEIGHT - 12 - _offset.y;
+ 
 	if (current_state == DIALOGUE_STATE.OPTION && current_selection > 0) {
-		_x_pos -= 42;
-		_y_pos -= 160 - (52 * current_selection);
+		_x_pos -= 8;
+		_y_pos -= 50 - (16 * current_selection);
 	}
 
 	draw_sprite_ext(
