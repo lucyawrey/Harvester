@@ -9,8 +9,9 @@ var _dy = 2;
 
 draw_sprite_stretched(spr_box, 0, _dx - 3, _dy, 74, 32);
 
-draw_set_font(fnt_rainy);
+// TODO correct font color #F1F4F7
+draw_set_font(fnt_pixelop);
 draw_text(_dx, _dy, $"{_season} {_day}");
 _dy += 14;
 draw_text(_dx, _dy, _time);
-draw_text(_dx + 32, _dy, _period);
+draw_text(_dx + 50, _dy, _period);

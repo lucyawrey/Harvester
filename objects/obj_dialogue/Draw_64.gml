@@ -103,15 +103,15 @@ function draw_speaker_name(
 	}
 
 	var _name_scribble = scribble(
-		$"[{current_character.name_color}]{current_character.name}"
+		$"[{current_character.font}][{current_character.name_color}]{current_character.name}"
 	);
 	var _speaker_w = _name_scribble.get_width();
 	var _speaker_h = _name_scribble.get_height();
 
 	var _speaker_box_x = _textbox_x;
-	var _speaker_box_y = _textbox_y - 25;
-	var _speaker_box_w = _speaker_w + (2 * _speaker_padding);
-	var _speaker_box_h = 24;
+	var _speaker_box_y = _textbox_y - 20;
+	var _speaker_box_w = _speaker_w + (2 * _speaker_padding) + 2;
+	var _speaker_box_h = 20;
 
 	if (is_blocked_right()) {
 		_speaker_box_x = _textbox_x + _textbox_w - _speaker_margin - _speaker_box_w;

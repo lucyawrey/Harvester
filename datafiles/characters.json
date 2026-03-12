@@ -1,8 +1,8 @@
 {
     "Base": {
         "name": "Base Character",
-        "name_color": "#999999",
-        "text_color": "#ffffff",
+        "name_color": "#F1F4F7",
+        "text_color": "#F1F4F7",
         "text_speed": 1,
         "prefix": "",
         "suffix": "",
@@ -12,7 +12,7 @@
         "background": "box",
         "background_alt": "box_alt",
         "fullscreen": false,
-        "font": "vcr"
+        "font": "pixelop"
     },
     "Narrator": {
         "name": ""

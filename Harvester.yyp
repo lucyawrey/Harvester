@@ -117,6 +117,7 @@
   },
   "name":"Harvester",
   "resources":[
+    {"id":{"name":"fnt_pixelop","path":"fonts/fnt_pixelop/fnt_pixelop.yy",},},
     {"id":{"name":"fnt_rainy","path":"fonts/fnt_rainy/fnt_rainy.yy",},},
     {"id":{"name":"fnt_vcr","path":"fonts/fnt_vcr/fnt_vcr.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
