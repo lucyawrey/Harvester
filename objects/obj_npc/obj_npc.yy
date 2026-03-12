@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_skel",
-    "path":"sprites/spr_skel/spr_skel.yy",
+    "name":"spr_sharm_skel",
+    "path":"sprites/spr_sharm_skel/spr_sharm_skel.yy",
   },
   "spriteMaskId":null,
   "visible":true,

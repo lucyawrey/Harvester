@@ -110,7 +110,7 @@ function draw_speaker_name(
 
 	var _speaker_box_x = _textbox_x;
 	var _speaker_box_y = _textbox_y - 20;
-	var _speaker_box_w = _speaker_w + (2 * _speaker_padding) + 2;
+	var _speaker_box_w = _speaker_w + (2 * _speaker_padding);
 	var _speaker_box_h = 20;
 
 	if (is_blocked_right()) {

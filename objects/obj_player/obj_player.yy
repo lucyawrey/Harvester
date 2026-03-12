@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_fem",
-    "path":"sprites/spr_player_fem/spr_player_fem.yy",
+    "name":"spr_sharm_player_fem",
+    "path":"sprites/spr_sharm_player_fem/spr_sharm_player_fem.yy",
   },
   "spriteMaskId":null,
   "visible":true,
