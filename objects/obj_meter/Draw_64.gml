@@ -4,7 +4,7 @@ var _wx = 12;
 var _hx = 56;
 var _max_energy_height = 56 - 2;
 
-draw_sprite_stretched(spr_box, 0, _dx, _dy, _wx, _hx);
+draw_sprite_stretched(spr_box1, 0, _dx, _dy, _wx, _hx);
 
 var _exhaustion_height = floor(state.save.exhaustion / MAX_ENERGY * _max_energy_height);
 var _offset1 = _max_energy_height - _exhaustion_height;

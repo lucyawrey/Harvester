@@ -206,7 +206,7 @@ function draw_text_advance_icon() {
 		return;
 	}
 
-	var _offset = get_offset_for_rotation(spr_square, advance_icon_rotation, 0.5);
+	var _offset = get_offset_for_rotation(spr_box3, advance_icon_rotation, 0.5);
 	var _x_pos = VIEW_WIDTH - 26 - _offset.x;
 	var _y_pos = VIEW_HEIGHT - 12 - _offset.y;
  
@@ -216,7 +216,7 @@ function draw_text_advance_icon() {
 	}
 
 	draw_sprite_ext(
-		spr_square,
+		spr_box3,
 		0,
 		_x_pos,
 		_y_pos,

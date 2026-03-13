@@ -9,8 +9,8 @@
         "sound": "click",
         "sound_pitch": 1,
         "sound_spacing": 4,
-        "background": "box",
-        "background_alt": "box_alt",
+        "background": "box1",
+        "background_alt": "box2",
         "fullscreen": false,
         "font": "pixelop"
     },

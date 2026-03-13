@@ -7,7 +7,7 @@ var _period = _time_split[1];
 var _dx = VIEW_WIDTH - 73;
 var _dy = 2;
 
-draw_sprite_stretched(spr_box, 0, _dx - 3, _dy, 74, 32);
+draw_sprite_stretched(spr_box1, 0, _dx - 3, _dy, 74, 32);
 
 scribble($"[{DEFAULT_COLOUR}]{_season} {_day}").draw(_dx, _dy);
 _dy += 14;
