@@ -9,9 +9,7 @@ var _dy = 2;
 
 draw_sprite_stretched(spr_box, 0, _dx - 3, _dy, 74, 32);
 
-// TODO correct font color #F1F4F7
-draw_set_font(fnt_pixelop);
-draw_text(_dx, _dy, $"{_season} {_day}");
+scribble($"[{DEFAULT_COLOUR}]{_season} {_day}").draw(_dx, _dy);
 _dy += 14;
-draw_text(_dx, _dy, _time);
-draw_text(_dx + 50, _dy, _period);
+scribble($"[{DEFAULT_COLOUR}]{_time}").draw(_dx, _dy);
+scribble($"[{DEFAULT_COLOUR}]{_period}").draw(_dx + 44, _dy);

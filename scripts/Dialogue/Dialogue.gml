@@ -1,6 +1,7 @@
 #macro BASE_CHARACTER_NAME "Base"
 #macro DEFAULT_CHARACTER_NAME "Narrator"
-#macro DEFAULT_FONT "fnt_vcr"
+#macro DEFAULT_FONT "fnt_pixelop"
+#macro DEFAULT_COLOUR "#F1F4F7"
 
 enum DIALOGUE_STATE {
 	TEXT,
