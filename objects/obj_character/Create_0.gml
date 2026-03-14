@@ -69,7 +69,7 @@ function interact() {
 	}
 
 	if (_target_tile_2.name == "tilled" && _target_actor == noone) {
-		create_actor(_ntx, _nty, current_plane, obj_crop);
+		create_actor(_ntx, _nty, z_order, current_plane, obj_crop);
 		if (is_player) {
 			energy_spend();
 		}

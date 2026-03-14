@@ -15,12 +15,14 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 	return noone;
 }
 
-function create_actor(_tx, _ty, _plane, _object_id) {
-	var _new = instance_create_layer(
+function create_actor(_tx, _ty, _z_order, _plane, _object_id) {
+	// TODO fix crop item not spawning
+	var _new = instance_create_depth(
 		pixel(_tx),
 		pixel(_ty) + TILE_SIZE,
-		"Actor",
-		_object_id
+		2 * _ty - _z_order,
+		_object_id,
+
 	);
 	_new.tx = _tx;
 	_new.ty = _ty;

@@ -77,7 +77,7 @@ function draw_textbox(_margin_x, _margin_y, _view_height_percent) {
 	draw_textbox_background(_x, _y, _w, _h);
 	draw_dialogue(_x, _y, _w);
 	draw_options(_x, _y, _w);
-    draw_speaker_name(_x, _y, _w, _h, 2, 2);
+	draw_speaker_name(_x, _y, _w, _h, 2, 2);
 }
 
 function draw_textbox_background(_x, _y, _w, _h) {
@@ -91,7 +91,7 @@ function draw_speaker_name(
 	_textbox_x,
 	_textbox_y,
 	_textbox_w,
-    _textbox_h,
+	_textbox_h,
 	_speaker_padding,
 	_speaker_margin
 ) {
@@ -103,7 +103,9 @@ function draw_speaker_name(
 	}
 
 	var _name_scribble = scribble(
-		$"[{current_character.font}][{current_character.name_color}]{current_character.name}"
+		$"[{current_character.font}][{current_character.name_color}]{
+			current_character.name
+		}"
 	);
 	var _speaker_w = _name_scribble.get_width();
 	var _speaker_h = _name_scribble.get_height();
@@ -209,7 +211,7 @@ function draw_text_advance_icon() {
 	var _offset = get_offset_for_rotation(spr_box3, advance_icon_rotation, 0.5);
 	var _x_pos = VIEW_WIDTH - 26 - _offset.x;
 	var _y_pos = VIEW_HEIGHT - 12 - _offset.y;
- 
+
 	if (current_state == DIALOGUE_STATE.OPTION && current_selection > 0) {
 		_x_pos -= 8;
 		_y_pos -= 50 - (16 * current_selection);

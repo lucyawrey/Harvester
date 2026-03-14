@@ -23,6 +23,6 @@ function set_visual() {
 function on_interact() {
 	if (current_growth_stage == growth_time_in_days) {
 		instance_destroy();
-		instance_create_layer(x + 1, y + 1, layer, obj_item);
+		create_actor(x, y, z_order, current_plane, obj_item);
 	}
 }

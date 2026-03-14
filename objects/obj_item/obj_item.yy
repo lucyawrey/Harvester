@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tomato_item",
-    "path":"sprites/spr_tomato_item/spr_tomato_item.yy",
+    "name":"spr_items_tomato",
+    "path":"sprites/spr_items_tomato/spr_items_tomato.yy",
   },
   "spriteMaskId":null,
   "visible":true,
