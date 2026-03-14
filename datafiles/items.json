@@ -1,0 +1,88 @@
+{
+    "default": {
+        "name": "Default",
+        "sprite": "spr_item_default",
+        "tool_type": 0,
+        "tier": 1
+    },
+    "tomato_seeds": {
+        "name": "Tomato Seeds",
+        "sprite": "spr_item_tomato_seeds"
+    },
+    "tomato": {
+        "name": "Tomato",
+        "sprite": "spr_item_tomato"
+    },
+    "copper_can": {
+        "name": "Copper Watering Can",
+        "sprite": "spr_item_copper_can",
+        "tool_type": 1,
+        "tier": 0
+    },
+    "copper_hoe": {
+        "name": "Copper Hoe",
+        "sprite": "spr_item_copper_hoe",
+        "tool_type": 2,
+        "tier": 0
+    },
+    "copper_hammer": {
+        "name": "Copper Hammer",
+        "sprite": "spr_item_copper_hammer",
+        "tool_type": 3,
+        "tier": 0
+    },
+    "silver_can": {
+        "name": "Silver Watering Can",
+        "sprite": "spr_item_silver_can",
+        "tool_type": 1,
+        "tier": 1
+    },
+    "silver_hoe": {
+        "name": "Silver Hoe",
+        "sprite": "spr_item_silver_hoe",
+        "tool_type": 2,
+        "tier": 1
+    },
+    "silver_hammer": {
+        "name": "Silver Hammer",
+        "sprite": "spr_item_silver_hammer",
+        "tool_type": 3,
+        "tier": 1
+    },
+    "gold_can": {
+        "name": "Gold Watering Can",
+        "sprite": "spr_item_gold_can",
+        "tool_type": 1,
+        "tier": 0
+    },
+    "gold_hoe": {
+        "name": "Gold Hoe",
+        "sprite": "spr_item_gold_hoe",
+        "tool_type": 2,
+        "tier": 0
+    },
+    "gold_hammer": {
+        "name": "Gold Hammer",
+        "sprite": "spr_item_gold_hammer",
+        "tool_type": 3,
+        "tier": 0
+    },
+    "mithril_can": {
+        "name": "Mithril Watering Can",
+        "sprite": "spr_item_mithril_can",
+        "tool_type": 1,
+        "tier": 0
+    },
+    "mithril_hoe": {
+        "name": "Copper Hoe",
+        "sprite": "spr_item_mithril_hoe",
+        "tool_type": 2,
+        "tier": 0
+    },
+    "mithril_hammer": {
+        "name": "Copper Hammer",
+        "sprite": "spr_item_mithril_hammer",
+        "tool_type": 3,
+        "tier": 0
+    }
+}

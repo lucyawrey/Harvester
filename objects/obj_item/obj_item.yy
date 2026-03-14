@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_items_tomato",
-    "path":"sprites/spr_items_tomato/spr_items_tomato.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

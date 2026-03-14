@@ -17,6 +17,7 @@ animation_toggle = false;
 move_timer = 0;
 queue_interact = false;
 queue_door = false;
+inventory = [];
 
 function move(_direction, _tiles) {
 	if (_tiles == 0) {

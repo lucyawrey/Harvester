@@ -5,7 +5,6 @@ function collect() {
 }
 
 function on_interact() {
-	log("test!!!!!!!!!");
 	collect();
 }
 

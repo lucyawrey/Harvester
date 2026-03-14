@@ -16,17 +16,13 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 }
 
 function create_actor(_tx, _ty, _z_order, _plane, _object_id) {
-	// TODO fix crop item not spawning
 	var _new = instance_create_depth(
 		pixel(_tx),
 		pixel(_ty) + TILE_SIZE,
 		2 * _ty - _z_order,
 		_object_id,
-
+		{tx: _tx, ty: _ty, current_plane: _plane}
 	);
-	_new.tx = _tx;
-	_new.ty = _ty;
-	_new.current_plane = _plane;
 }
 
 function struct_get_merged(_structs, _name) {
