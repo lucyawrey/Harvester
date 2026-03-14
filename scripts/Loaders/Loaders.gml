@@ -1,5 +1,6 @@
 #macro TILES_PATH "*tiles.json"
 #macro CHARACTERS_PATH "*characters.json"
+#macro ITEMS_PATH "*items.json"
 #macro TOTAL_TILES 256
 
 function load_tiles() {
@@ -15,6 +16,10 @@ function load_tiles() {
 			}
 		}
 	});
+}
+
+function load_items() {
+	state.items = load_json_files_to_struct(ITEMS_PATH);
 }
 
 function load_character_files(_directory) {

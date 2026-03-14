@@ -26,6 +26,8 @@ state = {
 	default_tile: {},
 	characters: {},
 	characters_cache: {},
+	items: {},
+	items_cache: {},
 	typist_sound_clock: 0,
 };
 

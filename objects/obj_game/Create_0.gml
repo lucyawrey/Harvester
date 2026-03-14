@@ -7,8 +7,8 @@ randomise();
 
 // Load data
 load_tiles();
+load_items();
 
 // Create objects
-instance_create_depth(0, 0, -100, obj_clock);
-instance_create_depth(0, 0, -100, obj_meter);
+instance_create_depth(0, 0, -100, obj_hud);
 instance_create_depth(0, 0, -100, obj_dialogue);

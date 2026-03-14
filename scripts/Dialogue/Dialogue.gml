@@ -142,7 +142,7 @@ function get_character(_character_id = "") {
 	if (struct_exists(state.characters_cache, _character_id)) {
 		return struct_get(state.characters_cache, _character_id);
 	}
-	// Fail if base character not available, then fetch base character.
+	// Fail if base character not available.
 	if (!struct_exists(state.characters, BASE_CHARACTER_NAME)) {
 		return;
 	}

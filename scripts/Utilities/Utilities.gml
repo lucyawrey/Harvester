@@ -62,3 +62,8 @@ function get_offset_for_rotation(_sprite, _angle, _scale = 2) {
 		y: sqrt(power(_w, 2) + power(_h, 2)) / 2 * dsin(-_angle + darctan(_h / _w)),
 	};
 }
+
+function wrap(_value, _min, _max) {
+	var _range = _max - _min;
+	return _min + (((_value - _min) % _range) + _range) % _range;
+}
