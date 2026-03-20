@@ -61,6 +61,9 @@ if (!obj_dialogue.visible) {
 
 	_dx -= 20;
 	_dy += 1;
+    
+    draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy + 17, 18, 18);
+    
 	array_foreach(_slots, function(_slot) {
 		if (is_struct(_slot)) {
 			draw_sprite(_slot.item.sprite, 0, _dx, _dy);

@@ -710,6 +710,7 @@
     {"id":{"name":"spr_box1","path":"sprites/spr_box1/spr_box1.yy",},},
     {"id":{"name":"spr_box2","path":"sprites/spr_box2/spr_box2.yy",},},
     {"id":{"name":"spr_box3","path":"sprites/spr_box3/spr_box3.yy",},},
+    {"id":{"name":"spr_box4","path":"sprites/spr_box4/spr_box4.yy",},},
     {"id":{"name":"spr_grid","path":"sprites/spr_grid/spr_grid.yy",},},
     {"id":{"name":"spr_item_copper_can","path":"sprites/spr_item_copper_can/spr_item_copper_can.yy",},},
     {"id":{"name":"spr_item_copper_hammer","path":"sprites/spr_item_copper_hammer/spr_item_copper_hammer.yy",},},
