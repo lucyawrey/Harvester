@@ -22,8 +22,8 @@ function __InputConfigVerbs() {
 	InputDefineVerb(VERB.DOWN, "down", [vk_down, "S"], [gp_axislv, gp_padd]);
 	InputDefineVerb(VERB.LEFT, "left", [vk_left, "A"], [-gp_axislh, gp_padl]);
 	InputDefineVerb(VERB.RIGHT, "right", [vk_right, "D"], [gp_axislh, gp_padr]);
-	InputDefineVerb(VERB.INVENTORY, "inventory", ["C", "E"], gp_face3);
-	InputDefineVerb(VERB.STORE, "store", ["V", "Q"], gp_face4);
+	InputDefineVerb(VERB.INVENTORY, "inventory", ["C", "Q"], gp_face3);
+	InputDefineVerb(VERB.STORE, "store", ["V", "E"], gp_face4);
 	InputDefineVerb(
 		VERB.MENU,
 		"menu",

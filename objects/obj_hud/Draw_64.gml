@@ -56,16 +56,17 @@ if (_energy_height > 1) {
 // TODO potentially cache this array
 if (!obj_dialogue.visible) {
 	var _slots = array_create_ext(3, function(_i) {
-		return get_slot(obj_player.inventory, obj_player.inventory_selection, _i - 1);
+		return get_slot(obj_player.inventory, abs(obj_player.inventory_selection), _i - 1);
 	});
 
 	_dx -= 20;
 	_dy += 1;
     
-    draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy + 17, 18, 18);
-    
-	array_foreach(_slots, function(_slot) {
+	array_foreach(_slots, function(_slot, _i) {
 		if (is_struct(_slot)) {
+            if (_i == 1 && obj_player.inventory_selection > 0) {
+                draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy - 1, 18, 18);
+            }
 			draw_sprite(_slot.item.sprite, 0, _dx, _dy);
 		}
 		_dy += 18;

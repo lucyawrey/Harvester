@@ -110,7 +110,7 @@
     "9647":{"character":9647,"h":21,"offset":3,"shift":12,"w":6,"x":26,"y":94,},
   },
   "hinting":0,
-  "includeTTF":false,
+  "includeTTF":true,
   "interpreter":0,
   "italic":false,
   "kerningPairs":[],
@@ -120,7 +120,7 @@
   "name":"fnt_vcr",
   "parent":{
     "name":"fonts",
-    "path":"folders/fonts.yy",
+    "path":"folders/assets/fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
@@ -138,6 +138,6 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "TTFName":"",
+  "TTFName":"/Users/lucy/GameMakerProjects/Harvester/fonts/fnt_vcr/VCR_OSD_MONO_1.001.ttf",
   "usesSDF":false,
 }
