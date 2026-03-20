@@ -54,15 +54,17 @@ if (_energy_height > 1) {
 // Item Bar
 // TODO handle negative item selections.
 // TODO potentially cache this array
-var _slots = array_create_ext(3, function(_i) {
-	return get_slot(obj_player.inventory, obj_player.inventory_selection, _i - 1);
-});
+if (!obj_dialogue.visible) {
+	var _slots = array_create_ext(3, function(_i) {
+		return get_slot(obj_player.inventory, obj_player.inventory_selection, _i - 1);
+	});
 
-_dx -= 20;
-_dy += 1;
-array_foreach(_slots, function(_slot) {
-	if (is_struct(_slot)) {
-		draw_sprite(_slot.item.sprite, 0, _dx, _dy);
-	}
-	_dy += 18;
-});
+	_dx -= 20;
+	_dy += 1;
+	array_foreach(_slots, function(_slot) {
+		if (is_struct(_slot)) {
+			draw_sprite(_slot.item.sprite, 0, _dx, _dy);
+		}
+		_dy += 18;
+	});
+}
