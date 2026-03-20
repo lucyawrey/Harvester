@@ -23,7 +23,7 @@
   ],
   "name":"spr_item_tomato",
   "nineSlice":null,
-  "origin":0,
+  "origin":6,
   "parent":{
     "name":"items",
     "path":"folders/assets/items.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

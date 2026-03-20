@@ -19,6 +19,19 @@ if (!is_moving) {
 	}
 }
 
+if (InputPressed(VERB.CYCLE_BACK)) {
+    var _slot = get_slot(inventory, inventory_selection, -1);
+	if (is_struct(_slot)) {
+        inventory_selection = _slot.position;
+    }
+}
+if (InputPressed(VERB.CYCLE_FORWARD)) {
+    var _slot = get_slot(inventory, inventory_selection, 1);
+    if (is_struct(_slot)) {
+        inventory_selection = _slot.position;
+    }
+}
+
 // Camera
 camera_set_view_pos(
 	camera,

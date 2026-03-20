@@ -5,8 +5,8 @@ var _time_split = string_split(tick_to_time(state.save.time, false), " ");
 var _time = _time_split[0];
 var _period = _time_split[1];
 
-var _dx = VIEW_WIDTH - 73;
-var _dy = 2;
+_dx = VIEW_WIDTH - 73;
+_dy = 2;
 
 draw_sprite_stretched(spr_box1, 0, _dx - 3, _dy, 74, 32);
 
@@ -52,7 +52,17 @@ if (_energy_height > 1) {
 }
 
 // Item Bar
-// TODO figure out item bar wrapping and rendering
-for (var _i = 0; _i < 3; _i++) {
-	
-}
+// TODO handle negative item selections.
+// TODO potentially cache this array
+var _slots = array_create_ext(3, function(_i) {
+	return get_slot(obj_player.inventory, obj_player.inventory_selection, _i - 1);
+});
+
+_dx -= 20;
+_dy += 1;
+array_foreach(_slots, function(_slot) {
+	if (is_struct(_slot)) {
+		draw_sprite(_slot.item.sprite, 0, _dx, _dy);
+	}
+	_dy += 18;
+});

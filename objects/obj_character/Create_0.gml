@@ -18,7 +18,7 @@ move_timer = 0;
 queue_interact = false;
 queue_door = false;
 inventory = array_create(INVENTORY_SLOTS, undefined);
-inventory_selection = 0;
+inventory_selection = 1;
 
 function move(_direction, _tiles) {
 	if (_tiles == 0) {
