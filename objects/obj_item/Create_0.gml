@@ -1,7 +1,10 @@
 event_inherited();
 
 function collect() {
-	instance_destroy();
+    // TODO handle any character collecting item
+    if (obj_player.add_item("tomato")) {
+        instance_destroy();
+    }
 }
 
 function on_interact() {

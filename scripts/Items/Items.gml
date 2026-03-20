@@ -47,6 +47,28 @@ function get_slot(_inventory, _number, _offset = 0) {
 	}
 }
 
+function get_free_slot(_inventory, _number, _offset = 0) {
+	_number--;
+	if (_offset == 0) {
+		return is_undefined(__get_slot(_inventory, _number)) ? _number + 1 : -1;
+	}
+	var _i = _number + _offset;
+	while (_i != _number) {
+		if (_i < 0) {
+			_i = INVENTORY_SLOTS - 1;
+		}
+		if (_i > INVENTORY_SLOTS - 1) {
+			_i = 0;
+		}
+		var _slot = __get_slot(_inventory, _i);
+		if (is_undefined(_slot)) {
+			return _i + 1;
+		}
+		_i += _offset;
+	}
+    return -1;
+}
+
 function __get_slot(_inventory, _number) {
 	var _slot = _inventory[_number];
 	return is_struct(_slot) && struct_exists(_slot, "id")

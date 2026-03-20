@@ -112,3 +112,13 @@ function switch_plane() {
 		set_active_plane(_new_plane);
 	}
 }
+
+function add_item(_id, _quantity = 1) {
+    // TODO handle item stacking
+    var _position = get_free_slot(inventory, inventory_selection - 1, 1);
+    log(_position);
+    if (_position != -1) {
+        inventory[_position - 1] = {id: _id, quantity: _quantity};
+    }
+    return false;
+}
