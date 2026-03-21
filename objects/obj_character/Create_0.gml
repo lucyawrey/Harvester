@@ -114,7 +114,13 @@ function switch_plane() {
 }
 
 function add_item(_id, _quantity = 1) {
-    // TODO handle item stacking
+    // TODO handle picking up only some of a dropped item when inventory is full
+    for (var _i = 0; _i < INVENTORY_SLOTS; _i++) {
+        if (is_struct(inventory[_i]) && _id == inventory[_i].id) {
+            inventory[_i].quantity += _quantity;
+            return true;
+        }
+    }
     var _position = get_free_slot(inventory, inventory_selection - 1, 1);
     if (_position != -1) {
         inventory[_position - 1] = {id: _id, quantity: _quantity};
