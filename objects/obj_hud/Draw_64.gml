@@ -66,6 +66,9 @@ if (!obj_dialogue.visible) {
                 draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy - 1, 18, 18);
             }
 			draw_sprite(_slot.item.sprite, 0, _dx, _dy);
+            if (_slot.slot.quantity > 1) {
+                scribble($"[#f5cb53]{_slot.slot.quantity}").draw(_dx, _dy);
+            }
 		}
 		_dy += 18;
 	});

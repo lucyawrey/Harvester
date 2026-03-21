@@ -119,6 +119,7 @@
     {"id":{"name":"fnt_pixelop","path":"fonts/fnt_pixelop/fnt_pixelop.yy",},},
     {"id":{"name":"fnt_vcr","path":"fonts/fnt_vcr/fnt_vcr.yy",},},
     {"id":{"name":"scribble_fallback_font","path":"fonts/scribble_fallback_font/scribble_fallback_font.yy",},},
+    {"id":{"name":"spr_dogica","path":"fonts/spr_dogica/spr_dogica.yy",},},
     {"id":{"name":"__InputUpdateController","path":"objects/__InputUpdateController/__InputUpdateController.yy",},},
     {"id":{"name":"obj_actor","path":"objects/obj_actor/obj_actor.yy",},},
     {"id":{"name":"obj_bed","path":"objects/obj_bed/obj_bed.yy",},},
