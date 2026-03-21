@@ -18,7 +18,7 @@ function get_actor(_tx, _ty, _plane, _ignore_obj_id = undefined) {
 function create_actor(_tx, _ty, _z_order, _plane, _object_id) {
 	var _new = instance_create_depth(
 		pixel(_tx),
-		pixel(_ty) + TILE_SIZE,
+		pixel(_ty),
 		2 * _ty - _z_order,
 		_object_id,
 		{tx: _tx, ty: _ty, current_plane: _plane}

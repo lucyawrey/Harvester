@@ -52,8 +52,6 @@ if (_energy_height > 1) {
 }
 
 // Item Bar
-// TODO handle negative item selections.
-// TODO potentially cache this array
 if (!obj_dialogue.visible) {
 	var _slots = array_create_ext(3, function(_i) {
 		return get_slot(obj_player.inventory, abs(obj_player.inventory_selection), _i - 1);

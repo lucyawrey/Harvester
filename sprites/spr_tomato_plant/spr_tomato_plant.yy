@@ -45,7 +45,7 @@
     ],
     "top":0,
   },
-  "origin":6,
+  "origin":0,
   "parent":{
     "name":"actors",
     "path":"folders/assets/actors.yy",
@@ -107,7 +107,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":16,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
