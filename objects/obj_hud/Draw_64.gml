@@ -58,7 +58,7 @@ if (!obj_dialogue.visible) {
 	var _slots = array_create_ext(3, function(_i) {
 		return get_slot(obj_player.inventory, abs(obj_player.inventory_selection), _i - 1);
 	});
-
+    log(_slots);
 	_dx -= 20;
 	_dy += 1;
     
