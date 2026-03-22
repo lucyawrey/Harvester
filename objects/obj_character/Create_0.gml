@@ -60,7 +60,7 @@ function interact() {
 	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
 	var _target_actor = get_actor(_ntx, _nty, current_plane);
 	var _slot = get_slot(inventory, inventory_selection);
-	var _tool = _slot.item.tool_type;
+	var _tool = is_struct(_slot) ? _slot.item.tool_type : TOOL.NONE;
 
 	if (
 		_target_tile_1.is_soil
