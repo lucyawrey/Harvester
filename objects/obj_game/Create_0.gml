@@ -8,6 +8,8 @@ randomise();
 // Load data
 load_tiles();
 load_items();
+global._fnt_numbers = font_add_sprite(spr_numbers, ord("0"), false, -3);
+#macro fnt_numbers font_get_fontname(global._fnt_numbers)
 
 // Create objects
 instance_create_depth(0, 0, -100, obj_hud);

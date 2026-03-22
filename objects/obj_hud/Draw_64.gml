@@ -54,21 +54,25 @@ if (_energy_height > 1) {
 // Item Bar
 if (!obj_dialogue.visible) {
 	var _slots = array_create_ext(3, function(_i) {
-		return get_slot(obj_player.inventory, abs(obj_player.inventory_selection), _i - 1);
+		return get_slot(
+			obj_player.inventory,
+			abs(obj_player.inventory_selection),
+			_i - 1
+		);
 	});
-    log(_slots);
+	log(_slots);
 	_dx -= 20;
 	_dy += 1;
-    
+
 	array_foreach(_slots, function(_slot, _i) {
 		if (is_struct(_slot)) {
-            if (_i == 1 && obj_player.inventory_selection > 0) {
-                draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy - 1, 18, 18);
-            }
+			if (_i == 1 && obj_player.inventory_selection > 0) {
+				draw_sprite_stretched(spr_box4, 0, _dx - 1, _dy - 1, 18, 18);
+			}
 			draw_sprite(_slot.item.sprite, 0, _dx, _dy);
-            if (_slot.slot.quantity > 1) {
-                scribble($"[#f5cb53]{_slot.slot.quantity}").draw(_dx, _dy);
-            }
+			if (_slot.slot.quantity > 1) {
+				scribble($"[{fnt_numbers}]{_slot.slot.quantity}").draw(_dx - 2, _dy - 1);
+			}
 		}
 		_dy += 18;
 	});

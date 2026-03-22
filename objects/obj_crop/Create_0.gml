@@ -10,11 +10,13 @@ visual_growth_stages = 4;
 current_growth_stage = 1;
 
 function grow() {
-	if (current_growth_stage < growth_time_in_days) {
+	var _tile = tilemap_get_tile(get_tilemap_2(), tx, ty);
+	if (current_growth_stage < growth_time_in_days && _tile.name == "tilled_wet") {
 		current_growth_stage++;
+		is_solid = current_growth_stage >= is_solid_stage;
+		set_visual();
+        tilemap_set(get_tilemap_2(), tile_get_id("tilled"), tx, ty);
 	}
-	is_solid = current_growth_stage >= is_solid_stage;
-	set_visual();
 }
 
 function set_visual() {

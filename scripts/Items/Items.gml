@@ -6,6 +6,7 @@ enum TOOL {
 	AXE = 4,
 	SCYTHE = 5,
 	SHOVEL = 6,
+	SEED = 7,
 }
 
 enum TIER {
@@ -20,10 +21,10 @@ enum TIER {
 #macro DEFAULT_ITEM_ID "default"
 
 function player_get_selected_slot() {
-    if (obj_player.inventory_selection < 1) {
-        return undefined;
-    }
-    return get_slot(obj_player.inventory, obj_player.inventory_selection);
+	if (obj_player.inventory_selection < 1) {
+		return undefined;
+	}
+	return get_slot(obj_player.inventory, obj_player.inventory_selection);
 }
 
 function get_slot(_inventory, _number, _offset = 0) {
@@ -66,7 +67,7 @@ function get_free_slot(_inventory, _number, _offset = 0) {
 		}
 		_i += _offset;
 	}
-    return -1;
+	return -1;
 }
 
 function __get_slot(_inventory, _number) {

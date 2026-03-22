@@ -7,7 +7,8 @@
     },
     "tomato_seeds": {
         "name": "Tomato Seeds",
-        "sprite": "tomato_seeds"
+        "sprite": "tomato_seeds",
+        "tool_type": 7
     },
     "tomato": {
         "name": "Tomato",

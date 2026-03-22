@@ -5,7 +5,7 @@ move_speed = InputCheck(VERB.CANCEL) ? base_move_speed * 2 : base_move_speed;
 move_delay = TILE_SIZE / move_speed;
 
 if (is_moving) {
-    // TODO Draw character where ty is top of sprite
+	// TODO Draw character where ty is top of sprite
 	var _nx = pixel(tx), _ny = pixel(ty);
 
 	if (move_timer > move_delay / 2) {

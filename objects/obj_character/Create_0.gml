@@ -50,10 +50,7 @@ function move(_direction, _tiles) {
 	image_index = target_image_index + (animation_toggle ? 1 : -1);
 	animation_toggle = !animation_toggle;
 
-	if (is_player) {
-		tick();
-		energy_spend();
-	}
+	player_tick(1);
 }
 
 function interact() {
@@ -62,30 +59,45 @@ function interact() {
 	var _target_tile_1 = tilemap_get_tile(get_tilemap_1(), _ntx, _nty);
 	var _target_tile_2 = tilemap_get_tile(get_tilemap_2(), _ntx, _nty);
 	var _target_actor = get_actor(_ntx, _nty, current_plane);
+	var _slot = get_slot(inventory, inventory_selection);
+	var _tool = _slot.item.tool_type;
 
-	if (_target_tile_1.is_soil && _target_tile_2.name == "void" && _target_actor == noone) {
+	if (
+		_target_tile_1.is_soil
+		&& _target_tile_2.name == "void"
+		&& _target_actor == noone
+		&& _tool == TOOL.HOE
+	) {
 		tilemap_set(get_tilemap_2(), tile_get_id("tilled"), _ntx, _nty);
-		if (is_player) {
-			energy_spend();
-		}
+		player_tick(2);
 	}
 
-	if (_target_tile_2.name == "tilled" && _target_actor == noone) {
-		create_actor(_ntx, _nty, z_order, current_plane, obj_crop);
-		if (is_player) {
-			energy_spend();
+	if ((_target_tile_2.name == "tilled" || _target_tile_2.name == "tilled_wet") && _target_actor == noone) {
+		if (_tool == TOOL.SEED) {
+			// TODO handle different seed and crop types
+			create_actor(_ntx, _nty, z_order, current_plane, obj_crop);
+			remove_item(_slot.item.id);
+			player_tick(2);
 		}
+		if (_tool == TOOL.HAMMER) {
+			tilemap_set(get_tilemap_2(), tile_get_id("void"), _ntx, _nty);
+			player_tick(2);
+		}
+	}
+	if (_target_tile_2.name == "tilled" && _tool == TOOL.CAN) {
+		tilemap_set(get_tilemap_2(), tile_get_id("tilled_wet"), _ntx, _nty);
+		player_tick(2);
 	}
 	if (_target_actor != noone) {
 		_target_actor.on_interact();
-		if (is_player) {
-			energy_spend();
-		}
+		player_tick(2);
 	}
+}
 
+function player_tick(_energy = 0) {
 	if (is_player) {
 		tick();
-		energy_spend();
+		energy_spend(_energy);
 	}
 }
 
@@ -114,17 +126,30 @@ function switch_plane() {
 }
 
 function add_item(_id, _quantity = 1) {
-    // TODO handle picking up only some of a dropped item when inventory is full
-    for (var _i = 0; _i < INVENTORY_SLOTS; _i++) {
-        if (is_struct(inventory[_i]) && _id == inventory[_i].id) {
-            inventory[_i].quantity += _quantity;
-            return true;
-        }
-    }
-    var _position = get_free_slot(inventory, inventory_selection - 1, 1);
-    if (_position != -1) {
-        inventory[_position - 1] = {id: _id, quantity: _quantity};
-        return true;
-    }
-    return false;
+	// TODO handle picking up only some of a dropped item when inventory is full
+	for (var _i = 0; _i < INVENTORY_SLOTS; _i++) {
+		if (is_struct(inventory[_i]) && _id == inventory[_i].id) {
+			inventory[_i].quantity += _quantity;
+			return true;
+		}
+	}
+	var _position = get_free_slot(inventory, inventory_selection - 1, 1);
+	if (_position != -1) {
+		inventory[_position - 1] = {id: _id, quantity: _quantity};
+		return true;
+	}
+	return false;
+}
+
+function remove_item(_id, _quantity = 1) {
+	for (var _i = 0; _i < INVENTORY_SLOTS; _i++) {
+		if (is_struct(inventory[_i]) && _id == inventory[_i].id) {
+			inventory[_i].quantity -= _quantity;
+			if (inventory[_i].quantity < 1) {
+				inventory[_i] = undefined;
+			}
+			return true;
+		}
+	}
+	return false;
 }

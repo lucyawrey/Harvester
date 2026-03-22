@@ -2,9 +2,11 @@
 
 function energy_spend(_amount = 1) {
 	if (state.save.energy > 0) {
-		state.save.energy--;
+		if (_amount > 0) {
+			state.save.energy -= _amount;
+		}
 	} else {
-		state.save.exhaustion += irandom_range(1, 2);
+		state.save.exhaustion += _amount * irandom_range(1, 2);
 	}
 }
 

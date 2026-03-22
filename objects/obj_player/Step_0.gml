@@ -32,7 +32,7 @@ if (InputPressed(VERB.CYCLE_FORWARD)) {
 	}
 }
 if (InputPressed(VERB.STORE)) {
-    inventory_selection *= -1;
+	inventory_selection *= -1;
 }
 
 // Camera
