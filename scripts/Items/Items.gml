@@ -28,6 +28,9 @@ function player_get_selected_slot() {
 }
 
 function get_slot(_inventory, _number, _offset = 0) {
+	if (_number < 1 || _number > INVENTORY_SLOTS) {
+        return undefined;
+    }
 	_number--;
 	if (_offset == 0) {
 		return __get_slot(_inventory, _number);

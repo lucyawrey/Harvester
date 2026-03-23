@@ -23,8 +23,8 @@ function set_visual() {
 	image_index = (current_growth_stage / growth_time_in_days * visual_growth_stages) - 1;
 }
 
-function on_interact() {
-	if (current_growth_stage == growth_time_in_days) {
+function on_interact(_tool = TOOL.NONE) {
+	if (_tool == TOOL.NONE && current_growth_stage == growth_time_in_days) {
 		create_actor(tx, ty, z_order, current_plane, obj_item);
 		instance_destroy();
 	}

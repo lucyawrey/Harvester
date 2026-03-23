@@ -8,7 +8,7 @@ function collect() {
 	}
 }
 
-function on_interact() {
+function on_interact(_tool = TOOL.NONE) {
 	collect();
 }
 

@@ -1,6 +1,6 @@
 event_inherited();
 
-function on_interact() {
+function on_interact(_tool = TOOL.NONE) {
 	show_dialogue("Skelechat");
 }
 

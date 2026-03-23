@@ -89,8 +89,10 @@ function interact() {
 		player_tick(2);
 	}
 	if (_target_actor != noone) {
-		_target_actor.on_interact();
-		player_tick(2);
+		var _do_tick = _target_actor.on_interact(_tool);
+        if (_do_tick == true) {
+            player_tick(2);
+        }
 	}
 }
 

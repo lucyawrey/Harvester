@@ -7,7 +7,7 @@ z_order = 0;
 tx = tilemap_get_cell_x_at_pixel(get_tilemap_1(), x, y);
 ty = tilemap_get_cell_y_at_pixel(get_tilemap_1(), x, y);
 
-function on_interact() {}
+function on_interact(_tool = TOOL.NONE) {}
 
 function on_enter() {}
 

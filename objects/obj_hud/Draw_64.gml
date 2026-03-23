@@ -60,7 +60,6 @@ if (!obj_dialogue.visible) {
 			_i - 1
 		);
 	});
-	log(_slots);
 	_dx -= 20;
 	_dy += 1;
 

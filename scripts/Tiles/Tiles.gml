@@ -1,4 +1,8 @@
 function tile_get(_id_name) {
+    // Handle out of bounds
+    if (_id_name == -1) {
+        _id_name = 0;
+    }
 	// TODO move most of this logic to load_tiles
 	if (is_string(_id_name)) {
 		_id_name = tile_get_id(_id_name);
