@@ -13,6 +13,15 @@
         "is_soil": true
     },
     {
+        "id": 2,
+        "name": "dirt",
+        "is_soil": true
+    },
+    {
+        "id": 3,
+        "name": "floor"
+    },
+    {
         "id": 16,
         "name": "tilled"
     },

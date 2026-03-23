@@ -725,6 +725,7 @@
     {"id":{"name":"spr_item_silver_can","path":"sprites/spr_item_silver_can/spr_item_silver_can.yy",},},
     {"id":{"name":"spr_item_silver_hammer","path":"sprites/spr_item_silver_hammer/spr_item_silver_hammer.yy",},},
     {"id":{"name":"spr_item_silver_hoe","path":"sprites/spr_item_silver_hoe/spr_item_silver_hoe.yy",},},
+    {"id":{"name":"spr_item_tile_floor","path":"sprites/spr_item_tile_floor/spr_item_tile_floor.yy",},},
     {"id":{"name":"spr_item_tomato_seeds","path":"sprites/spr_item_tomato_seeds/spr_item_tomato_seeds.yy",},},
     {"id":{"name":"spr_item_tomato","path":"sprites/spr_item_tomato/spr_item_tomato.yy",},},
     {"id":{"name":"spr_numbers","path":"sprites/spr_numbers/spr_numbers.yy",},},

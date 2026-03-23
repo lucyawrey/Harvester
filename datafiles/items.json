@@ -14,6 +14,11 @@
         "name": "Tomato",
         "sprite": "tomato"
     },
+    "tile_floor": {
+        "name": "Floor",
+        "sprite": "tile_floor",
+        "tool_type": 8
+    },
     "copper_can": {
         "name": "Copper Watering Can",
         "sprite": "copper_can",

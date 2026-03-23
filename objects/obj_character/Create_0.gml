@@ -71,7 +71,6 @@ function interact() {
 		tilemap_set(get_tilemap_2(), tile_get_id("tilled"), _ntx, _nty);
 		player_tick(2);
 	}
-
 	if ((_target_tile_2.name == "tilled" || _target_tile_2.name == "tilled_wet") && _target_actor == noone) {
 		if (_tool == TOOL.SEED) {
 			// TODO handle different seed and crop types
@@ -84,6 +83,16 @@ function interact() {
 			player_tick(2);
 		}
 	}
+    if (_tool == TOOL.TILE && (_target_tile_1.name == "dirt" || _target_tile_1.name == "grass")) {
+        // TODO handle more tile types
+        tilemap_set(get_tilemap_1(), tile_get_id("floor"), _ntx, _nty);
+        remove_item("tile_floor");
+    }
+    if (_target_tile_1.name == "floor" && _tool == TOOL.HAMMER) {
+        // TODO handle more breakable tiles
+        tilemap_set(get_tilemap_1(), tile_get_id("dirt"), _ntx, _nty);
+        add_item("tile_floor");
+    }
 	if (_target_tile_2.name == "tilled" && _tool == TOOL.CAN) {
 		tilemap_set(get_tilemap_2(), tile_get_id("tilled_wet"), _ntx, _nty);
 		player_tick(2);

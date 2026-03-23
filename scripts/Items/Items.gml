@@ -7,6 +7,7 @@ enum TOOL {
 	SCYTHE = 5,
 	SHOVEL = 6,
 	SEED = 7,
+    TILE = 8,
 }
 
 enum TIER {
